@@ -1,0 +1,36 @@
+Practical Exercise
+Create four variables of the GenericValue type in your sequence
+A with value “123”
+B with value “456”
+C with value 123
+D with value 456
+Print to the console various operations with them and see what is the result
+
+A + B
+C + D
+A + C
+C + A
+
+Compiler error(s) encountered processing expression "A + B".
+'B' is not declared. It may be inaccessible due to its protection level.
+
+Compiler error(s) encountered processing expression "C + D".
+'C' is not declared. It may be inaccessible due to its protection level.
+
+Compiler error(s) encountered processing expression "A + C".
+'C' is not declared. It may be inaccessible due to its protection level.
+
+Compiler error(s) encountered processing expression "C + A".
+'C' is not declared. It may be inaccessible due to its protection level.
+
+	FOr what ever reason i had to go back and change the Name value in the properties pane in addition to the name value in the Variable window
+
+SO when it did run, we saw STRING CONCATENATION when the equation had one or more strings in it.
+
+B
+F
+D
+
+
+Also side note, Its annoying that there is a walk through were you create the Automation but the class wont let you proceed until you download the awnser.
+	I guess this is for later when they hold your hand less and your program gets all F U C K Y

@@ -1,0 +1,35 @@
+{
+  "name": "Lesson2PracticalExercise1",
+  "description": "This automation does the following:\r\n\r\nStarts by asking the user a mathematical question (e.g. the equation, 1+1 =2) in a Message Box with Yes/No choices and capturing the user's answer:\r\n\r\nA. If the user answered Yes (which is the True answer):\r\n\r\nOpens Notepad.exe\r\nAttaches to the window of Notepad.exe\r\nUpon attaching to the window, types Correct into it.\r\nB. If the user chose No (which is the False answer):\r\n\r\nDoes the same series of actions as the True branch. However, instead of typing Corr",
+  "main": "Main.xaml",
+  "dependencies": {
+    "UiPath.Excel.Activities": "[2.6.3]",
+    "UiPath.Mail.Activities": "[1.6.0]",
+    "UiPath.System.Activities": "[19.8.0]",
+    "UiPath.UIAutomation.Activities": "[19.8.0-ce]"
+  },
+  "webServices": [],
+  "schemaVersion": "4.0",
+  "studioVersion": "19.8.0.0",
+  "projectVersion": "1.0.0",
+  "runtimeOptions": {
+    "autoDispose": false,
+    "isPausable": true,
+    "requiresUserInteraction": true,
+    "supportsPersistence": false,
+    "excludedLoggedData": [
+      "Private:*",
+      "*password*"
+    ],
+    "executionType": "Workflow"
+  },
+  "designOptions": {
+    "projectProfile": "Developement",
+    "outputType": "Process",
+    "libraryOptions": {
+      "includeOriginalXaml": false,
+      "privateWorkflows": []
+    }
+  },
+  "expressionLanguage": "VisualBasic"
+}
