@@ -1,0 +1,21 @@
+Create a flowchart which performs the following actions: 
+Starts by asking the user a mathematical question (e.g. the equation, 1+1 =2) in a Message Box with Yes/No choices and capturing the user's answer:
+
+A. If the user answered Yes (which is the True answer):
+
+Opens Notepad.exe
+Attaches to the window of Notepad.exe
+Upon attaching to the window, types Correct into it.
+B. If the user chose No (which is the False answer):
+
+Does the same series of actions as the True branch. However, instead of typing Correct, types Incorrect into Notepad.
+Finally, closes the Notepad application.
+
+19.8.0+Branch.master.Sha.680d3a6b9a242ff3a0f9a32b7bf3faba605524aa
+
+The workflow has validation errors. Review and resolve them first.
+
+Compiler error(s) encountered processing expression "yes".
+'yes' is not declared. It may be inaccessible due to its protection level.
+	fixed by removeing default value from the variable. I think i forgot to include yes in quotes
+

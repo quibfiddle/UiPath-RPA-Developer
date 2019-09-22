@@ -1,0 +1,52 @@
+UI Interactions
+	All interactions fall into one of two categories; Input and Output
+
+		Input action examples
+			clicks
+			text typing
+			keyboard shortcuts
+			right clicks
+			mosue hover
+
+		Output action examples
+			getting text
+			find elements and images
+			clipboard operations
+
+
+	There a few different input methos with their various strengths and weaknesses
+		Default
+			This will work 100% of the time, but as it is just emulating clicks and keystrokes with a virtual mouse/keyboard, it can be pretty slow.
+
+		Windows Message
+			This works about 80% of the time, at the same speed as default, but can run in the background
+
+		Simulate Type/Click
+			This works most of the time *like 99% of webpages and 60% of desktop apps*, can run in the background, works at 100% speed, and can automaticly empty a field for new input.
+
+Screen Scraping
+	Screen scrapping is like that copy field function we used earlier, BUT, generally used for 
+		bigger blocks of text
+		when information is behind a complex UI
+		you need exact word position on screen
+
+	There are three main Screen Scraping Methods:
+		FullText
+			Its fast, acurate, works in the background, an occasionaly reveals hidden information
+		Native
+			Slightly slower, 100% accurate, and can capture text position in an app
+		OCR
+			much slower than the other two, 98% accurate, but works in Citrix
+				IT looks at the indicated area as an image, and tries to read it.
+
+Webpages often present items / results / objects in a repeating structured form, and UiPath has a tool for extracting that data into a usable form:
+	Data Scarping tool allows you to select recuring elements, and it will try and figure out the pattern at which they ocour, and build a DataTable Output
+
+Practical Applications
+
+Create a short sequence that does the following:
+Attaches to a browser window on this page
+Scrapes all names and prices until 100 items are reached
+Writes scraped data into a newly created Excel Spreadsheet
+
+	Stuff was EZPZ

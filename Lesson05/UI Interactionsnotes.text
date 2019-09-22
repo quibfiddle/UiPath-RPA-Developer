@@ -1,0 +1,25 @@
+UI Interactions
+	All interactions fall into one of two categories; Input and Output
+
+		Input action examples
+			clicks
+			text typing
+			keyboard shortcuts
+			right clicks
+			mosue hover
+
+		Output action examples
+			getting text
+			find elements and images
+			clipboard operations
+
+
+	There a few different input methos with their various strengths and weaknesses
+		Default
+			This will work 100% of the time, but as it is just emulating clicks and keystrokes with a virtual mouse/keyboard, it can be pretty slow.
+
+		Windows Message
+			This works about 80% of the time, at the same speed as default, but can run in the background
+
+		Simulate Type/Click
+			This works most of the time *like 95% of the time*, can run in the background, works at 100% speed, and can automaticly empty a field for new input.

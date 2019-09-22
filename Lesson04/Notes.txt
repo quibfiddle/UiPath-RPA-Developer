@@ -1,0 +1,79 @@
+Recording
+
+The recorder allows you to build a framerwork to build upon and paramarterize,.
+	
+UIPath has 4 types of recording
+	Basic
+	Desktop
+		Basic and desktop are pretty much identical
+
+		Desktop recording will create more detailed sequences, creating a new DO sequence for each window you work in during your recording; drop down menus, and dialog boxes are considered new windows.
+
+	Web
+		Similar to the first two, but built to meet the requirements of different browsers and webapps
+
+	Citrix
+		For recording virtual machines, VNC and Citrix enviornments
+			Fundementally different that the other 3 methods of recording, but similar actions available to the automator
+
+Some actions are not captureable by the recorder, and you need to do that from the recorder menue
+	Recordable
+		Left Clicks on: buttons, checkboxes dropdowns etc
+
+		Text: typing
+
+	Non-Recordable:
+		Keyboard Shortcuts
+		Modifier Keys
+		Right Click
+		Mouse Hover etc
+
+"Indicate on screen" selection can let you go into a recording and change values by clicking/writing a different thing at that step in the automation.
+
+Using Manual Recording frees us up to capture more ephermeral parts of a process
+	doing so lets us capture
+		keyboard shortcuts
+		modifier keys
+		right click
+		mouse hover
+		ect
+
+		getting text
+		find elements and images
+		copy to clipboard
+
+Every recorded action has an associated selector,
+	A selector is like a recipe for finding th correct element on screen, or like file
+		A common fix for broken selectors is using the "Repair" tab on the selector editor,
+		it works very simillary to the "Indicate on screen" selections for changing values in recorded processes.
+
+A little trick to have UiPath correctly guess the generic value type you are working with is just adding a value preceeding the varriables you are workign with
+	
+	text = span1 + span2 
+
+	the variable text may not be able to add two HTML spans that are numbers, as it might guess your generic variables span1 and span2 are strings. Typing it this way however, will have UiPath probably guess them to be itns
+
+	text = 0 + span1 + span2
+
+
+Practical Exercise Notes
+	
+	Create a sequence that does the following Notepad automation:
+	Asks the user for the text to be typed.
+	Asks the user for the title under which the file should be saved.
+	Opens Notepad.
+	Types the user’s text.
+	Changes the font style to bold and its size to 16.
+	Navigates to Save as to save the file with the user’s title.
+
+	Did this with out the guide. Im pretty much the best at this
+
+Practical Exercise
+	
+	Create a sequence that does the following:
+	Asks the user to input a city name.
+	Opens a web browser (Internet Explorer is recommended) and navigates to google.com.
+	Types in the search bar ‘weather in <city>’, and executes a search.
+	Scrapes the temperature data.
+	Displays the temperature in a message box.
+	 
