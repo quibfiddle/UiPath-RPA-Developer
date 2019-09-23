@@ -1,0 +1,39 @@
+Image Based Automation
+	Citirx AUtomation,
+		We cant use the recorder to automatically recognize fields.
+
+		Citrix automation is built fully on OCR
+
+		The recording tool just lets you select parts of an image that the tool tries to make sense of, Like you can use the click image field to have it high light and try and decode what it is saying.
+
+Copy pasta
+
+Since you cannot use selectors on the image that is sent in a Citrix environment,
+the approach is a little different than in other scenarios: you perform actions in
+relation to some elements.
+In a Citrix environment, Click Image and Click OCR Text are your best friends
+for inputting.
+Click OCR Text uses OCR to find the target text.
+Both Click OCR Text and Click Image offer options for modifier keys, single
+or double click and left or right mouse buttons.
+Remember you can tweak the Click Image’s Accuracy property to get the
+desired results. This value goes from 0 to 1 and higher values mean higher
+similarity between the images.
+Getting information out of such environments is done through the use of 2
+methods: Copy Selected Text (Select & Copy from the recorder) and Scrape
+Relative. Just keep in mind that for Copy Selected Text to work you need
+Clipboard sharing enabled between local and Citrix environment.
+Scrape Relative scrapes only a portion of an image, relative
+to an anchor.
+Best practices
+Click Image is fast and reliable, but sensitive to graphical variations, while Click
+OCR Text is immune to such changes but susceptible to OCR failures.
+To avoid the problems that come with Click OCR Text and Click Image you
+should use keyboard shortcuts as much as possible.
+Selecting too much or too little of an image might lead to it not being found or
+a false positive.
+To get good results when matching images, the resolution should be at least
+equal to the one used when recording the workflows. You can also compensate
+such losses by lowering the Accuracy factor
+Pay attention to how the application layout changes on different resolutions
+when using coordinate based techniques

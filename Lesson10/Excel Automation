@@ -1,0 +1,23 @@
+Excel Automation
+	You can interact with Excel files in one of two ways
+
+		Use Excel App
+			requires MS Office excel installed
+			Multiple process can use the same file
+			Visible real-time changes
+
+		Direct Access
+			Does not require MS office
+				(not is spelt wrong in this tutorial lol)
+			Only one process can use the file
+			Works only for xlsx format
+
+	Its important to Differeniate between Excel documents and Data Tables when automating this stuff
+
+		Excel Docuemtents can conatin any number of indvidual data tables, images, merged cells and formulas whereas data tables are the similest form of spreadsheet data, rows and columns.
+
+	The guy in the video says colon : strangly
+		like is stretches out then on in colon like the last sylable in Romulan.
+		also is pronouces data with a r sound at the end like data(r)
+
+(Foundation, Orchestrator and Advanced trainings and REFramework knowledg

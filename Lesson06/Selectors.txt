@@ -1,0 +1,75 @@
+Selectors
+	
+All input steps have an assoicated selector, which helps define what object the automation is interacting with.
+
+Ui Explorer is a tool that lets you  visualize a "Tree" of containers in a particular application.
+
+The Ui Selector definies the entire directory of windows, from the root all the way to the indicated target
+
+Customization and debugging selectors
+
+	Selectors can be defined as Full or Partial.
+
+	Full selectors
+		A selector that defines all containers for a UiElement, including the top level window
+
+		The basic recording functionallity records using Full selectors
+
+	Partial Selectors
+		A selector that just defines some of a UiElement, as the activity that need the selector can get the higher level elements from its containing automation
+
+		Desktop recording uses partial selectors
+
+Occasionally, you will need to select an object that has a unique name or identifier. For this we use Dynamic Selectors
+
+	We can use Wildcards
+
+	*
+		Replaces any number of characters
+
+			For example: Editing a document who's title changes every day like , status update 28-10-2019 - Notepad, we can replace the dynamic part of that document's title in the selector from
+
+			title='status update 28-10-2019 - Notepad'
+
+			to
+
+			title='status update* -Notepad'
+
+	?
+		Replaces exactly one character
+
+Index selector
+represented in selector markup as idx=n, it is useful for having the automation select the nth item in a grouping
+
+Paramarterizing Selectors
+	You can use UiExplorer to review the selector for a given step, and then edit that selector to include a variable. For example, the following selector
+
+	"<wnd app='sublime_text.exe' cls='PX_WINDOW_CLASS' title='Selectors • - Sublime Text (UNREGISTERED)' />"
+
+	could be paramarterized in the following way
+
+	"<wnd app='sublime_text.exe' cls='PX_WINDOW_CLASS' title=" + otherTitle + " />"
+
+	were we concatinate that selector string with the otherTitle variable, that is set to something like
+
+	otherTitle = "'Ui Interactions • - Sublime Text (UNREGISTERED)'"
+
+
+RPA Challenge
+	UiPath has a challenge page, where they have a series of forms that are specifically difficult to automate. There are several tricks to dynamically figuring out how to add data to fields that change at each different input
+
+	Anchor Base
+		This is a too that will search for an element, and then grab the closest input and try and associate it with that input.
+
+		Does not work in the background
+
+	Relative Selector
+		similar to the anchor base; does not work in the background, but relies on the internal structure of the application
+
+Practical Exercise
+Create a sequence to input data into the Automation Challenge website.
+First, use the FakeNameGenerator.com to generate random data. Extract values for Name, Phone number and Company name.
+
+Next, type into RPAChallenge.com website the 3 values in the First Name, Phone Number and Company Name fields.
+
+Use UiExplorer to build reliable selector. Try Anchor Base activity and Select Relative element option in UiExplorer to get the target element relative to its Label

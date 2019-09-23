@@ -1,0 +1,12 @@
+Advanced Citrix Automation
+	Keyboard actions are typically more reliable than mouse and click options.
+
+	It is also important to know the state of your remote application, so your application isnt inputting information while the remote application is loading or something.
+
+
+beargh. boring. 
+
+Find Image can be used to look for the loading icon on the cursor, as to wait the active application to finish loading before taking the next step
+
+a better way of starting a given application is assigning it a keyboard shorcut
+
