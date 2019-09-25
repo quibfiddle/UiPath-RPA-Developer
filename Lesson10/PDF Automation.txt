@@ -1,0 +1,21 @@
+PDF Automation
+	So before even messing around with this lesson, we are going to install the base version of Acrobat Reader DC, as newer versions make the selector slightly more unreliable.
+
+	Also, im just throwing reader on there. Not acrobat. Hopefully there are no input steps in this lesson *there probably are.
+
+Looks like pdf dependancies are not installed by default,
+	just select the packet manager.
+
+UiPath has activities associated with PDFs split into two major categories
+	Large Texts
+		Read PDF Text Activity
+
+	Specific Elements
+		leveraging the screen scraping tool, we can select and work with specific parts of a given pdf.
+
+UiPaths primary application dependancy package can read pdfs with two activities:
+	readpdf
+		Just grabs all the actual text from the pdf and assign it to a variable
+	read pdf with OCR
+		uses Optical Character REcognition to translate images back into characters
+		THis shit takes forever on big pdfs.

@@ -1,0 +1,21 @@
+Email Automation
+Email can be thought about two ways with UiPath
+	Input via e-mail
+		Emails recieved can contain Names or IDs in the subject or body
+		Input files coming as attachments
+
+	Output via e-mail
+		Automation progress reports
+		Automation Exception reports
+
+By defualt UiPath can interact with mailboxes in a couple ways
+	By logging in and working directly with the mailbox via SMTP / Pop3 / IMAP / Exchange
+
+	or
+
+	by integrating with Outlook, and automating steps taken within that application.
+
+Got logged into my stuart@stuartbingham.net mailbox for this.
+
+get.IMAP mail messagess has a variable output type of
+	list<MailMessage>
