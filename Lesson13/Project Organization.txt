@@ -1,0 +1,48 @@
+Project Organization
+	The main goals of Project Organization are to make the project more
+		Reliable
+		Efficient
+		Maintainable
+		Extensible
+
+Best Practices
+	Pick an appropriate layout for each workflow
+		Know when to use a Flowchart vs a Sequence
+
+		Flowcharts
+			Generally used for the main Work Flow.
+
+
+		Sequences
+			Ui Interactions are better suited for Sequence
+			Avoid using too many nested If statements, instead opting for Flow Chart Decisions
+
+	Break the whole process in smaller workflows
+		Develop and test pieces independently
+
+		Reuse workflows across projects
+
+		collaborate working on seperate files
+
+	Use Exception handling
+		Make full use of the try/catch to at least log problematic steps, for later error correction.
+
+		Having a loop, or error handling decision flow will allow you to reset the automation to a working state in the event of a failure.
+
+	Make your Workflows readable
+		Other people may need to read/debug it
+		Give discriptive names to all your components/activities
+		comment your code
+		keep environment settings in a seperate file
+
+	Keep it clean
+		Have the automation close the windows it is working with when done, or you will run into an eventual slow down were you have countless applications / webpages open.
+
+Invoking a workflow
+	You can put sequences/flow charts into a workflow, which you can then add that workflow to other projects to gain that workflows steps and functionallity
+
+	Invoking a workflow will cause the variables of that workflow become arguments which can be passed in, out or in/out into the parent workflow
+
+Project Organization
+
+	

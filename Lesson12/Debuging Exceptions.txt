@@ -1,0 +1,45 @@
+Debuging Exceptions
+	I had already been doing this on all the sections before this, but lets see how they define it.
+
+	Essential Note:
+		Name your activities! When an exception is thrown, UiPath will return the exception, by name.
+
+	Debuging tools can be found in the Execute tab
+
+		common steps taken in dubugging are using...
+			Slow Step;
+				allows you to slow the automation by a configurable precentage
+
+			Highlight Elements
+				As the automatoion executes, the element targets get highlighted in red
+
+		You can use the pause option
+			this will pause the procedure and you can check out what variables are set to
+
+Input Issues
+	CHanging the options in the input activity properties helps sometimes
+		For example, the Click activity
+			wont work if the window is not on top, and both sendwindowsmessage and SimulateClick are unchecked
+
+	Repariging the selector in the selector editor compares the last known working configuration and the recently validated elements, and tries to find common values between them
+
+Timing and Sync Issues
+	These type of errors happen occasionaly when the automation attempts to interact with an element that has not loaded.
+
+	YOu can use OCR to look for specific things before taking the next step.
+
+	There are three main activites that you can use
+		Element Exists
+			Doesn't effect the running of the workflow in anyway
+				Just returns a true or false value; depending on the exsistance of a specific element
+
+		Find Element
+			Waits for a given element to show up, and the moves forward with the automation
+
+		Wait Element Vanish
+
+Cathing Errors
+	We can create error message and error logs using TryCatch activitie.
+		Using the activity can add new logic to terminate a task earlier or generate logs on failure
+
+https://docs.uipath.com/studio/v2018.3/docs/logging-levels
