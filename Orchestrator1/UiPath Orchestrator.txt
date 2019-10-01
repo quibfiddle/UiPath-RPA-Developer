@@ -1,0 +1,47 @@
+UiPath Orchestrator
+	A web based application that lets you managed UiPath Robot's
+
+	It provides management capabilities for large amount of robots and for the human reviewers
+
+Using UiPath Studio, we can publish projects as packages
+	So this first video was just a broad overview and not a walk along. That explains the lack of explanation for setting up robots
+
+To establish a connection between a robot and Orchestraor, we need to perform 3 steps:
+	Provision the machine in Orchestrator
+	
+
+	Provision the Robot
+		Robots can be created with a couple different configurations
+			In this first tutorial we are setting up a Floating one 
+
+	Setting up the local robot with the needed information from Orchestrator
+
+
+	Ran into a bit of a challenge associating my session with UIRobot: will check out later;
+
+	System.OperationCanceledException: The operation was canceled.
+   at System.Threading.CancellationToken.ThrowOperationCanceledException()
+   at System.IO.Pipes.NamedPipeClientStream.ConnectInternal(Int32 timeout, CancellationToken cancellationToken, Int32 startTime)
+   at System.IO.Pipes.NamedPipeClientStream.<>c__DisplayClass21_0.<ConnectAsync>b__0()
+   at System.Threading.Tasks.Task.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Ipc.NamedPipe.NamedPipeClient`1.<ConnectToServerAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Ipc.ServiceClient`1.<EnsureConnection>d__20.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Ipc.ServiceClient`1.<>c__DisplayClass17_0`1.<<InvokeAsync>b__3>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Ipc.IOHelpers.<WithResult>d__3.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Ipc.IOHelpers.<WithTimeout>d__8`1.MoveNext()
