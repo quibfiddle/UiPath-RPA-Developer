@@ -1,0 +1,27 @@
+I have been running into a licensing issue, but have not updated the main branch of this project with my notes so far. Unfortunately I'm on Linux yesterday and today, so im just going to review the licensing documentaiton.
+
+This is the main ideas from the current licening documentation: https://docs.uipath.com/robot/docs/about-licensing
+
+Licensing Concepts
+
+Named User
+	A license associated with a given Active Directory User, that allows any number of robots on any machine, so long as it is logged in as that given AD user.
+
+Concurrent User.
+	A license associated with a given Robot. The robot has to be connected to Orchestrator. the UiPath robot is running, and Studio is running.
+
+Concurrent Runtime
+
+	Used for licensing Unattended and NonProductions robots. This is for licensing robots that are able to execute processes simultaneously. Typically, windows workstations can only run one process at a time, and windows servers 
+
+So the community Licensing is not working for whatever reason. I need to check and see if i can license robots with a computer that is not a member of a domain. 
+
+From the licensing documentation:
+"
+Please take into account that connecting Studio to Orchestrator only works with Active Directory users. If you have local users, each of them is counted and consumes a license.
+"
+It looks like i will need to take a second look at my activation, and clean up the number of local users on my computer... Or perhaps try and use a domain computer:
+
+https://docs.uipath.com/studio/docs/activating-your-studio-license
+
+
