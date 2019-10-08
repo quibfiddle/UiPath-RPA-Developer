@@ -45,3 +45,126 @@ To establish a connection between a robot and Orchestraor, we need to perform 3 
    at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
    at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
    at UiPath.Ipc.IOHelpers.<WithTimeout>d__8`1.MoveNext()
+
+
+ /-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/ 10/1/2019
+
+ So lets try and reproduce that robot allocation challenge.
+
+ Rebooted
+ started uipath robot
+input machine id
+and
+https://platform.uipath.com
+for url
+
+Connection worked right away. Guess it was just in need of a reboot.
+
+anyways, back to lesson orchestrator 2018.3 - video part 2
+
+We are setting up afloating robot, a robot that is not associated with a particular computer.
+
+When connecting the robot to orchestrator is says status: unlicensed.
+	some googling got me here:
+		https://forum.uipath.com/t/orchestrator-connection-showing-unlicensed/129609
+
+		They are saying stuff along the lines of
+			"Please check username from your robot config, make sure match with your pc username"
+
+		So ill double check that. I am also going to make the integration account a local admin on my computer.
+
+		restarted and reconnected robot at each step
+
+		changing local permisions did not change the unlicensed state...
+			nah
+		Updated and verified good crednetials in orchestrator..
+			nope
+		Deleted Paralax (the robot in orchestrator)
+			created Paralax2
+			I used cmd > to generate case sensitive hostname and username for the robot settings
+			...
+			It seems that in the tutorial they use the creds of the active windows user...
+			Reconnected, status unlicensed.
+			Alright time to try with the active user (me)
+
+		Opened back up the robot
+			Used my credentials
+			not licensed.
+			Perhpas i can recreate the machine profile...?
+			recreated machine profile, connected with the new machine key
+			unlicensed
+
+This looks like a problem for tomorrow.
+
+/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/ 10/7
+
+Going to go forard with training, and deal with the licensing in the exercise.
+
+Robots can be triggered locally and remotely, using the UiPath app
+
+The settings tab in the robot details view in orchestrator can be used to set intial paramaters for the robot to run by,
+
+Publish a project
+ 
+
+Go to UiPath Studio to create a new Process. The New Blank Process window is displayed.
+
+	Done (in the practice exercise 1 folder)
+
+Click the Name field and type a name, such as “OrchestratorHelloWorld”, and then press Create.
+
+	Check
+
+Drag and drop a Message Box activity to the Designer panel.
+
+	Check. Doing a quick restart, as its acting a little funny.
+
+Click the Text field and type any text, such as “Hello UiPath Orchestrator!”.
+Run the process. After the message box appears, press OK to return to Studio. This test is completed.
+
+	done
+
+Under Design, click Publish. In the new window select Robot Defaults and hit Publish. A message pops up. It specifies that a package has been published locally (by default, in C:\ProgramData\UiPath\Packages).
+
+	yep its there.
+	Seems pretty inane.
+
+Exercise two
+
+Register your robot to Orchestrator
+ 
+
+The following is a one time action, for each individual robot. It does not apply to Floating Robots:
+ 
+
+In Orchestrator go to Machines, click Add and then select Standard Machine. The Provision A Standard Machine page is displayed.
+
+Done. Named Orchestrator Testing.
+
+Then access the robot interface by right-clicking the UI Icon on the Taskbar. Select Settings... Additionally, allow the robot to make changes if a window requesting that is displayed. 
+
+
+Note: If you can’t find the icon, make sure the service is running. Click here to see the instructions. 
+
+The Robot Settings window is displayed. Copy the Machine Name and leave the window open.
+
+
+ 
+
+Go back to Orchestrator tab, paste the machine name in the Name field and hit Provision.
+
+
+For the newly created machine click on View and copy the machine key to clipboard.
+Go to Robots, click Add and select Standard Robot. 
+Select the Machine created earlier, then in the Name field enter a suggestive name that enables you to properly identify and handle the robot instance later.
+Note: Make sure you follow good naming principles, to avoid robot mismanagement when multiple robots are added.
+
+In the Domain\Username and Password fields, enter the Windows credentials of your personal machine. If you don't know your domain\username open a Command Prompt and type whoami.
+Select the Development robot type from the Type drop-down list and hit Create.
+Note: To take advantage of the High Density Robots feature, select the Create another check box. The option enables you to add multiple robots to the same machine if the Windows instance allows it, i.e. if the Windows Server is used. For more information about High Density Robots, see this article. 
+
+Go to Robot Settings window and paste the key copied from Orchestrator in the Machine key field.
+Copy the Orchestrator URL and paste it in the Robot Settings window, in the corresponding field and click Connect.
+Congratulations! The robot should now be visible under the Robots section, with the Available status.
+For more information about connecting the robot to Orchestrator you can see this article.
+
