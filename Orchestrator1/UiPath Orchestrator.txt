@@ -139,7 +139,7 @@ The following is a one time action, for each individual robot. It does not apply
 
 In Orchestrator go to Machines, click Add and then select Standard Machine. The Provision A Standard Machine page is displayed.
 
-Done. Named Orchestrator Testing.
+	Done. Named Orchestrator Testing.
 
 Then access the robot interface by right-clicking the UI Icon on the Taskbar. Select Settings... Additionally, allow the robot to make changes if a window requesting that is displayed. 
 
@@ -149,17 +149,30 @@ Note: If you can’t find the icon, make sure the service is running. Click here
 The Robot Settings window is displayed. Copy the Machine Name and leave the window open.
 
 
+	done
  
 
 Go back to Orchestrator tab, paste the machine name in the Name field and hit Provision.
 
+	ok
 
 For the newly created machine click on View and copy the machine key to clipboard.
+
+	ok
+
 Go to Robots, click Add and select Standard Robot. 
+
+	
+
 Select the Machine created earlier, then in the Name field enter a suggestive name that enables you to properly identify and handle the robot instance later.
 Note: Make sure you follow good naming principles, to avoid robot mismanagement when multiple robots are added.
+	
+	OrchestratorEx2
 
 In the Domain\Username and Password fields, enter the Windows credentials of your personal machine. If you don't know your domain\username open a Command Prompt and type whoami.
+
+	DESKTOP-O6THBGM\Stuart
+
 Select the Development robot type from the Type drop-down list and hit Create.
 Note: To take advantage of the High Density Robots feature, select the Create another check box. The option enables you to add multiple robots to the same machine if the Windows instance allows it, i.e. if the Windows Server is used. For more information about High Density Robots, see this article. 
 
@@ -168,3 +181,121 @@ Copy the Orchestrator URL and paste it in the Robot Settings window, in the corr
 Congratulations! The robot should now be visible under the Robots section, with the Available status.
 For more information about connecting the robot to Orchestrator you can see this article.
 
+	OHHHHH, the machine name has to be used from the Orchestrator SEttings window on the machine when provisioning a machine name in orchestrator platform. The bots are licensed now.
+
+/-/-/-/-/-/-/-/-/-/--/-/-/--/-/-/-/-/-/-/ 10/9
+
+Exercise 3
+
+Publishing your first process
+ 
+
+To make the robot work, we still need to go through a few steps:
+1. Create a new Environment
+An Environment is a great way to keep your Robots grouped together. Think of Environments as teams of coworkers collaborating to fulfill the same goal.
+On the Robots page, select the Environments tab. 
+Click the Add button.
+In the Name field, enter an Environment title. Make sure you follow good naming principles.
+Note: Give the new Environment a suggestive name,such as Finance Robots or HR Robots. You can even pick a more creative one, such as DemoEnvironment, which is used in this session.
+
+	done
+
+Click Create. The Manage Environment window is displayed.
+Add your newly provisioned Robot by selecting the checkbox associated with it, and then click Update.
+
+	done
+
+Your Robot is now part of this environment. To edit an environment, click on Manage. Robots can be added or removed from any environment by selecting or deselecting them.
+
+2. Create a process
+In UiPath Studio, in Design ribbon click on Publish and again on Publish. Now that your Robot is connected to Orchestrator, the processes are automatically published to the Orchestrator feed. Note that the publishing location has been changed to https://platform.uipath.com/.
+
+	done
+
+The Processes page enables users to create a new process to be run from Orchestrator.
+
+In Orchestrator, open the Processes page and click Add. The Deploy Process window is displayed.
+Find OrchestratorHelloWorld in the Package Name section.
+Note: Use the default package version.
+
+Choose the Environment you want to run the process on and click Create. Let’s assume you chose the “DemoEnvironment” environment.
+Click Create to save your settings.
+
+	done
+
+3. Running a process manually
+In Orchestrator, navigate to the Jobs page.
+Click on Start and identify the previously created process. In this case, our process is OrchestratorHelloWorld_DemoEnvironment.
+Select the robots in the environment you want to run the process on, and then click Start.
+The “Hello UiPath Orchestrator” message box appears.
+Congratulations! You have just run your first process from Orchestrator.
+
+	it worked. Dope.
+
+Lesson 3 
+How Robot executions can be triggered and maanged
+
+Jobs can be queued up manually through the JObs / Processes view.
+
+Jobs can be set up to run at a predefined schedule using hte schedulee view.
+
+
+Jobs can be scheduled and stopped from the Jobs view:
+
+Kill will stop the process exactly as soon as the automation gets the command to kill the proces, regardless of what step of the auomation is at.
+
+Stop will stop the executing automation at the next specified stop point.
+	"Should Stop" can be added to workflows to include a "graceful" stopping point in the automation, that can be activated from Orchestrator.
+
+
+Robots can be dynamically allocated when Jobs are created.
+	When creating a job, just select the "Allocate Dynamically" when specifying robots
+
+Leson4
+Logs
+
+Select view logs
+
+Robot logging information can be changes, and by default it just logs at "Information" which just says details about the process starting or finishing.
+
+Processes can be configured to generate logs at varying levels of severity
+
+Lesson5
+Assets
+Assetts can be used to pass intial settings or varriables to a process with out modifying the Process itself.
+
+There are four types of assets that can be used when spinning up a process,
+	Text
+		Use the GetAsset activity in the process to work with this one.
+	Bool
+		same
+	Integer
+		same
+	Credential
+		Use the GetCredential activity in the processes to work with this one
+
+Queues can be created and used to have robots working together to work through a shared set of data with out duplicating effort.
+	An example of this is assigning several robots to work through a list in an excel document that executes a process for each row of data in the document.
+
+	When in a queue robots assign a status to each item in the queue.
+		New
+			An item that was added to a queue, and has not yet been interacted with by a robot
+
+		In Progress
+			A robot is processing the item in queue
+
+		Sucessful
+			An item in the queue with this status was succesfully processed by the robot.
+
+		Failed
+			Application
+				Not gone over in this video, but i suspect its a failure resulting from a fault with UiPAth, or the Windows enviornment.
+
+			Buisness
+				A failure resulting from bad data. Typically happens when an item contains data in an unexpected way, like the automation was expecting an interger, but in that given field it got a string.
+
+		Retried
+			An item that failed, but the process has an AutoRetry specified in Orchestrator
+
+		Abandoned
+			The status of a new item in a queue that was not touched for 24 hours
