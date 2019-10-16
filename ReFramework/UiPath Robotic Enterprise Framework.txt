@@ -1,0 +1,120 @@
+UiPath Robotic Enterprise Framework
+
+Building Productive robots requries:
+	Proper Exception handling
+
+	Recovery Abilities
+
+	Effective logging
+
+	Reporting Functionalities
+
+	High Maintainability
+
+	Extensibility
+
+	Reusability
+
+	Easy of development
+
+Bigger projects typically use the UiPath_REFramework as a standard for building processes that meet best practicie
+
+	The reframework is built on a flowchart involving 3 main processes
+
+		Init
+			What the process is initialized with; like what data is starts with either email, spreadsheet or whatever.
+
+			By default, Init uses a config file that is a dictionary table type variable stored in Data\Config.xlsx (which can be found in the UiPath ReFramework folder)
+
+		Get Transaction Data
+			This step evaluates if there is work to be done with the data the processes was initialized with; ie it has iterated through a series of data cells, or how many emails are in an inbox. like DANGG
+
+				This Step can have two results,
+					No Data
+						The Reframework moves to the End of process
+					New Transaction
+						There's shit to do
+
+				Each transaction is numbers, and stored as a variable by reframework called TransactionNumber
+
+				TransactionItem is a QueueItem variable, that facilitiates Orchestrator integration, it should be removed if not leveraging Orchestrator
+
+				When TransactionItem is Null, you get the No Data result in the ReFramework Flow, and the process completes. 
+
+		Process Transaction
+			The nuts and bolts of the automation, where the particular thing you are automating is held. It does whatever you want to do with that set of data. 
+				There are 3 possible results from this step
+
+				Success
+					It does whatever it was trying to do succesfully, and goes back to Get Transaction Data
+
+				Rule exception
+					The automation gets some unexpected values, but is otherwise able to continue on, and goes back to Get Transaction Data
+
+				Error
+					Shits FUUUUUCKed. It goes back to the Init state of the automation.
+
+There are try catches in all steps of each the Init, Get Transaction Data and Process Transaction.
+
+
+Ui Demo Outline
+
+Introduction
+Let’s imagine the following scenario. We have a teller application called “UiDemo”. We need to automate the process of inserting transactions. The transaction-related input data is stored in an Excel file. You might think this process is simple enough – we need to use a Read Range activity, then to loop through each row in the resulting DataTable to register the transactions in UiDemo. However, the challenge here is that due to the very large number of transactions, multiple robots are required to work at the same time. According to the Solution Architect and the Business Analyst, we need to allocate the process to as many as 5 robots.
+
+Additional Information: The input Excel file has three columns – one for each of the three fields to be filled.
+
+The BA has identified two Business Exceptions:
+
+Invalid input data – Values are not numbers.
+CashIn too large – we cannot process CashIn values larger than 1000$.
+The Solution Architect has required to retry failed transactions two times. In case of an Application Exception, the robot should recover from the error and continue working. If the last retry fails, an error is thrown. The retry of a transaction should be logged as a warning.
+
+Create an automation that accomplishes the above task.
+
+Hints: Use Orchestrator Queues and the REFramework. The REFramework can be found here.
+
+You can download UiDemo here. A sample Excel file can be found here.
+
+Find the credentials for UiDemo below.
+
+Username: admin
+Password: password
+
+
+Notes from Project #1
+
+	After complting the Dispatcher, i am unable to uplaod the entire framework, due to several missing dependancies... Checking out the readme to see what dependancies i need to include when working with Re Framework
+
+	Fixed it, just debugging the file we created ignores the missing dependancies of the main loop.
+
+	Error in AddQueueItem
+		Add Queue Item: Column 'OnUsCheck' does not belong to table DataTable.
+
+		Changed the ranged of the Read Range activity
+
+	New error:
+	Add Queue Item: Queue Name may not be null or empty.
+		This is probably becuase the QueueName should not be a string...?
+		Added the transactoinQueueUiDemo Queue into my orchestrator
+
+		The automation does not appear to be talking with the Orchestrator queueue
+
+		Changing the default string value of the transacitonQueueUiDemo name seemded to have fixed it
+
+	I now have items in the transactionQueueUiDemo in my orchestrator instance
+
+
+	Moving onto performer,
+		The Invoke Workflow activity does not seem to be available in the activities browser currently. I am going to proceed with the invoke workflow from file activity.
+
+			wait, nah, GetAppCredentials is a sub process of REFramework that can be dragged into a flow/sequence. So i did this isntead.
+
+				Created a credential assett in orchestrator called UiDemo1Credentials with the following data
+					Username: admin
+					Password: password
+
+				Error when running the performer
+				Invoke GetAppCredentials workflow: Cannot create unknown type '{http://schemas.uipath.com/workflow/activities}GetSecureCredential'.
+
+				
