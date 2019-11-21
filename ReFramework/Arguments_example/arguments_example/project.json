@@ -1,18 +1,17 @@
 {
-  "name": "CalculateClientSecurityHash",
-  "description": "Following along on the walkthrough for the Calculate Client Security Hash.",
+  "name": "arguments_example",
+  "description": "Input and Output Arguments Example",
   "main": "Main.xaml",
   "dependencies": {
-    "UiPath.Credentials.Activities": "[1.1.6479.13204]",
-    "UiPath.Excel.Activities": "[2.7.1-beta.557523]",
-    "UiPath.Mail.Activities": "[1.7.1-beta.557462]",
-    "UiPath.System.Activities": "[19.10.0-beta.558599]",
-    "UiPath.UIAutomation.Activities": "[19.10.0-beta.566220]"
+    "UiPath.Excel.Activities": "[2.5.2]",
+    "UiPath.Mail.Activities": "[1.3.0]",
+    "UiPath.System.Activities": "[19.3.0]",
+    "UiPath.UIAutomation.Activities": "[19.3.0]"
   },
   "webServices": [],
   "schemaVersion": "4.0",
-  "studioVersion": "19.10.0.111",
-  "projectVersion": "1.0.3",
+  "studioVersion": "19.10.0.484",
+  "projectVersion": "1.0.4",
   "runtimeOptions": {
     "autoDispose": false,
     "isPausable": true,
@@ -36,16 +35,22 @@
   "arguments": {
     "input": [
       {
-        "name": "OrchestratorQueueName",
+        "name": "Username",
         "type": "System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
         "required": false,
-        "hasDefault": false
+        "hasDefault": true
+      },
+      {
+        "name": "Password",
+        "type": "System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+        "required": false,
+        "hasDefault": true
       }
     ],
     "output": [
       {
-        "name": "out_WI5List",
-        "type": "System.Data.DataRow[], System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+        "name": "ExtractedDataTable",
+        "type": "System.Data.DataTable, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
       }
     ]
   },

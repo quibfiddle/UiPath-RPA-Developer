@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>659,2469</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>659,2212</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>System1 Login_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="22">
@@ -34,7 +34,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="19">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="38">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -54,9 +54,10 @@
       <AssemblyReference>System.ValueTuple</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Logs into the web interface at https://acme-test.uipath.com/" DisplayName="System1 Login" sap:VirtualizedContainerService.HintSize="639,2409" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Logs into the web interface at https://acme-test.uipath.com/" DisplayName="System1 Login" sap:VirtualizedContainerService.HintSize="639,2322" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="username" />
       <Variable x:TypeArguments="ss:SecureString" Name="password" />
@@ -68,15 +69,15 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:CommentOut sap2010:Annotation.AnnotationText="I could not get this to pull data from the config file. I would love feedback if whoever takes a look at this does that sort of thing.&#xA;&#xA;I just want to see a working configuration and compare it against my settings / syntax" DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="597,344" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="597,257" sap2010:WorkflowViewState.IdRef="CommentOut_2">
       <ui:CommentOut.Body>
-        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,179" sap2010:WorkflowViewState.IdRef="Sequence_4">
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,179" sap2010:WorkflowViewState.IdRef="Sequence_6">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke GetAppCredentials workflow" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Framework\GetAppCredentials.xaml">
+          <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke GetAppCredentials workflow" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" Timeout="{x:Null}" UnSafe="False" WorkflowFileName="Framework\GetAppCredentials.xaml">
             <ui:InvokeWorkflowFile.Arguments>
               <OutArgument x:TypeArguments="x:String" x:Key="out_Username">[username]</OutArgument>
               <InArgument x:TypeArguments="x:String" x:Key="in_Credential">[in_Config(“System1Credential”).toString]</InArgument>
@@ -85,11 +86,6 @@
           </ui:InvokeWorkflowFile>
         </Sequence>
       </ui:CommentOut.Body>
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
     </ui:CommentOut>
     <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="System1URL" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="597,22" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
       <ui:GetRobotAsset.Value>
@@ -103,7 +99,7 @@
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="563,1685" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="563,1683" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:Boolean" Name="dashboard" />
             </Sequence.Variables>
@@ -118,7 +114,7 @@
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="726eb9632f9586cdf6012ec7b0ff4542" Selector="&lt;html app='chrome.exe' title='ACME System 1 - Dashboard' /&gt;&lt;webctrl idx='1' tag='H1' /&gt;" TimeoutMS="100" WaitForReady="COMPLETE" />
               </ui:UiElementExists.Target>
             </ui:UiElementExists>
-            <If sap2010:Annotation.AnnotationText="Occasionally, the website has a good authentication token, and takes you straight to the dashboard, SO this If just checks to see if the dashboard item is present or not when it opens the page, and if not it logs in." Condition="[dashboard = False]" sap:VirtualizedContainerService.HintSize="521,723" sap2010:WorkflowViewState.IdRef="If_2">
+            <If sap2010:Annotation.AnnotationText="Occasionally, the website has a good authentication token, and takes you straight to the dashboard, SO this If just checks to see if the dashboard item is present or not when it opens the page, and if not it logs in." Condition="[dashboard = False]" sap:VirtualizedContainerService.HintSize="521,722" sap2010:WorkflowViewState.IdRef="If_2">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -189,7 +185,7 @@
                 </ui:Target>
               </ui:UiElementExists.Target>
             </ui:UiElementExists>
-            <If Condition="[dashboard = False]" sap:VirtualizedContainerService.HintSize="521,476" sap2010:WorkflowViewState.IdRef="If_1">
+            <If Condition="[dashboard = False]" sap:VirtualizedContainerService.HintSize="521,475" sap2010:WorkflowViewState.IdRef="If_1">
               <If.Then>
                 <Sequence sap:VirtualizedContainerService.HintSize="376,328" sap2010:WorkflowViewState.IdRef="Sequence_3">
                   <Sequence.Variables>
