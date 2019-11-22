@@ -1,0 +1,87 @@
+Client ID: AD38755
+Client Name: Austin Villacorta
+Client Country: Italy
+
+environment.Newline
+
+Messing around on System1ExtractClientInformation
+
+	split(ClientInformationArray(0).ToString,":")
+	ClientInformationDetails.split(Environment.NewLine.TocharArray)(0)
+
+	split(ClientInformationArray(1).ToString,":")
+
+	split(ClientInformationArray(2).ToString,":")
+
+	Tried this:
+	Split(ClientInformationDetails,vbCRLf)
+		This does not seem to split it into
+
+	Split(ClientInformationDetails,{Environment.NewLine})
+
+	ClientInformationDetails.Split(new ClientInformationArray() {Environment.NewLine},StringSplitOptions.None)
+	Not splitting it
+
+	ClientInformationDetails.split(Environment.NewLine.TocharArray)(0)
+
+	ClientInformationDetails.Split(Environment.NewLine.ToArray, StringSplitOptions.RemoveEmptyEntries)(0)
+
+	ClientInformationDetails.Split(Environment.NewLine.ToArray, StringSplitOptions.RemoveEmptyEntries)(1)
+
+	ClientInformationDetails.Split(Environment.NewLine.ToArray, StringSplitOptions.RemoveEmptyEntries)(2)
+
+	This one works for just getting the specific lines of the extracted information
+		Next 
+		split(ClientID,":")(1).ToString
+		split(ClientName,":")(1).ToString
+		split(ClientCountry,":")(1).ToString
+
+	These are not working for clearing out the unneeded information. Going to try and use Regex
+
+Regex.Match(ClientID, "(?<=(Client ID: ))(.*)").Value.Trim
+
+	This didnt work, I think i need a Regex Dependancy. There are a million in the package software, so im going to not bother and continue trying to get split to work.
+
+		ClientID.Split({“Client ID: ”},StringSplitOptions.None)(1).ToString
+		ClientName.Split({“Client ID: ”},StringSplitOptions.None)(1).ToString
+		ClientCountry.Split({“Client ID: ”},StringSplitOptions.None)(1).ToString
+
+		This worked.
+
+
+
+In the Process Workflow
+	out_ClientID+"-"+out_ClientName+"-"+out_ClientCountry
+
+AD38755-Austin Villacorta-Italy
+
+
+Finally finished all the framework sequences. Now im just troubleshooting the entire workflow
+	Initallapplications is still wigging out not passing variables right. watched
+	https://www.youtube.com/watch?v=fO-c5-e4yUE
+	to try and make more sense of it. Setting up a local varriable first at Initallapplications to see if that works.
+
+	Arguments are finally making sense now. Bassically You establish an out argument as a variable in the import arguments button in the Invoke workflow activity
+
+out_out_out_WI5List
+
+WI5List(in_TransactionNumber).ToString
+
+out_out_out_WI5List
+
+	after some fenageling i was able to pass the argument to the main workflow. Now to pass it back in. While changing the argument name in GetTransactionData to the new name i was able to pass to the mainworkflow i ran into some validation errors changing
+
+	WI5List(in_TransactionNumber).ToString
+
+	to 
+
+	out_out_out_WI5List(in_TransactionNumber).ToString
+
+	actually no i didnt. I did some other nonsense but back tracking and changing the value i listed up there to the value next it works.
+
+Error	ERROR	Compiler error(s) encountered processing expression "out_TransactionItem("WIID")".
+Class 'UiPath.Core.QueueItem' cannot be indexed because it has no default property.	Framework/GetTransactionData.xaml
+
+ in_TransactionItem.SpecificContent(“WIID”).ToString
+
+ Attach Browser 'chrome.exe ACME': Cannot find the UI element corresponding to this selector: <html app='chrome.exe' title='ACME System 1 - *' idx='2' />
