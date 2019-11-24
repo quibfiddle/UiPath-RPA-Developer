@@ -85,3 +85,1215 @@ Class 'UiPath.Core.QueueItem' cannot be indexed because it has no default proper
  in_TransactionItem.SpecificContent(“WIID”).ToString
 
  Attach Browser 'chrome.exe ACME': Cannot find the UI element corresponding to this selector: <html app='chrome.exe' title='ACME System 1 - *' idx='2' />
+
+
+Switched around the system error catch because it kept erroring out, but iwas not seeing where from the logs
+SystemError isNot Nothing
+
+SystemError is Nothing
+
+That didnt let it proceed. Lets look at the logs:
+
+12:42:43.2653 => [ERROR] [UiPath.Studio.exe] [1] Error while getting window handle: System.ArgumentNullException: Value cannot be null.
+Parameter name: window
+   at System.Windows.Interop.WindowInteropHelper..ctor(Window window)
+   at UiPath.NativeWindow.GetIntPtr(Window window).
+12:42:45.4830 => [ERROR] [UiPath.Studio.exe] [1] Error while getting window handle: System.ArgumentNullException: Value cannot be null.
+Parameter name: window
+   at System.Windows.Interop.WindowInteropHelper..ctor(Window window)
+   at UiPath.NativeWindow.GetIntPtr(Window window).
+12:42:45.4830 => [ERROR] [UiPath.Studio.exe] [1] Error while getting window handle: System.ArgumentNullException: Value cannot be null.
+Parameter name: window
+   at System.Windows.Interop.WindowInteropHelper..ctor(Window window)
+   at UiPath.NativeWindow.GetIntPtr(Window window).
+13:13:42.3011 => [ERROR] [UiPath.Studio.exe] [3] The process cannot access the file 'C:\Users\Stuart\Documents\UiPath-RPA-Developer\ReFramework\UiDemo2\CalculateClientSecurityHash\SHA1Online\Sha1OnlineGetHashCode.xaml' because it is being used by another process.
+13:13:42.3011 => [ERROR] [UiPath.Studio.exe] [71] The process cannot access the file 'C:\Users\Stuart\Documents\UiPath-RPA-Developer\ReFramework\UiDemo2\CalculateClientSecurityHash\SHA1Online\Sha1OnlineGetHashCode.xaml' because it is being used by another process.
+13:13:42.3011 => [ERROR] [UiPath.Studio.exe] [50] The process cannot access the file 'C:\Users\Stuart\Documents\UiPath-RPA-Developer\ReFramework\UiDemo2\CalculateClientSecurityHash\SHA1Online\Sha1OnlineGetHashCode.xaml' because it is being used by another process.
+13:17:30.3139 => [WARN] [UiPath.Studio.exe] [1] XamlMigration: removed reference System.Runtime.WindowsRuntime
+13:25:33.1440 => [ERROR] [UiPath.Studio.exe] [1] Error while getting window handle: System.ArgumentNullException: Value cannot be null.
+Parameter name: window
+   at System.Windows.Interop.WindowInteropHelper..ctor(Window window)
+   at UiPath.NativeWindow.GetIntPtr(Window window).
+13:25:35.1245 => [ERROR] [UiPath.Studio.exe] [1] Error while getting window handle: System.ArgumentNullException: Value cannot be null.
+Parameter name: window
+   at System.Windows.Interop.WindowInteropHelper..ctor(Window window)
+   at UiPath.NativeWindow.GetIntPtr(Window window).
+13:25:35.1245 => [ERROR] [UiPath.Studio.exe] [1] Error while getting window handle: System.ArgumentNullException: Value cannot be null.
+Parameter name: window
+   at System.Windows.Interop.WindowInteropHelper..ctor(Window window)
+   at UiPath.NativeWindow.GetIntPtr(Window window).
+13:26:15.0260 => [ERROR] [UiPath.Studio.exe] [1] Error while getting window handle: System.ArgumentNullException: Value cannot be null.
+Parameter name: window
+   at System.Windows.Interop.WindowInteropHelper..ctor(Window window)
+   at UiPath.NativeWindow.GetIntPtr(Window window).
+13:26:17.1050 => [ERROR] [UiPath.Studio.exe] [1] Error while getting window handle: System.ArgumentNullException: Value cannot be null.
+Parameter name: window
+   at System.Windows.Interop.WindowInteropHelper..ctor(Window window)
+   at UiPath.NativeWindow.GetIntPtr(Window window).
+13:26:56.8558 => [ERROR] [UiPath.Studio.exe] [1] Error while getting window handle: System.ArgumentNullException: Value cannot be null.
+Parameter name: window
+   at System.Windows.Interop.WindowInteropHelper..ctor(Window window)
+   at UiPath.NativeWindow.GetIntPtr(Window window).
+13:26:58.7700 => [ERROR] [UiPath.Studio.exe] [1] Error while getting window handle: System.ArgumentNullException: Value cannot be null.
+Parameter name: window
+   at System.Windows.Interop.WindowInteropHelper..ctor(Window window)
+   at UiPath.NativeWindow.GetIntPtr(Window window).
+13:26:58.7700 => [ERROR] [UiPath.Studio.exe] [1] Error while getting window handle: System.ArgumentNullException: Value cannot be null.
+Parameter name: window
+   at System.Windows.Interop.WindowInteropHelper..ctor(Window window)
+   at UiPath.NativeWindow.GetIntPtr(Window window).
+14:46:32.2733 => [ERROR] [UiPath.Studio.exe] [1] Error while getting window handle: System.ArgumentNullException: Value cannot be null.
+Parameter name: window
+   at System.Windows.Interop.WindowInteropHelper..ctor(Window window)
+   at UiPath.NativeWindow.GetIntPtr(Window window).
+14:46:37.2917 => [ERROR] [UiPath.Studio.exe] [1] Error while getting window handle: System.ArgumentNullException: Value cannot be null.
+Parameter name: window
+   at System.Windows.Interop.WindowInteropHelper..ctor(Window window)
+   at UiPath.NativeWindow.GetIntPtr(Window window).
+14:46:37.2917 => [ERROR] [UiPath.Studio.exe] [1] Error while getting window handle: System.ArgumentNullException: Value cannot be null.
+Parameter name: window
+   at System.Windows.Interop.WindowInteropHelper..ctor(Window window)
+   at UiPath.NativeWindow.GetIntPtr(Window window).
+14:47:48.5613 => [ERROR] [UiPath.Studio.exe] [1] Error while getting window handle: System.ArgumentNullException: Value cannot be null.
+Parameter name: window
+   at System.Windows.Interop.WindowInteropHelper..ctor(Window window)
+   at UiPath.NativeWindow.GetIntPtr(Window window).
+14:47:50.3541 => [ERROR] [UiPath.Studio.exe] [1] Error while getting window handle: System.ArgumentNullException: Value cannot be null.
+Parameter name: window
+   at System.Windows.Interop.WindowInteropHelper..ctor(Window window)
+   at UiPath.NativeWindow.GetIntPtr(Window window).
+14:47:50.3541 => [ERROR] [UiPath.Studio.exe] [1] Error while getting window handle: System.ArgumentNullException: Value cannot be null.
+Parameter name: window
+   at System.Windows.Interop.WindowInteropHelper..ctor(Window window)
+   at UiPath.NativeWindow.GetIntPtr(Window window).
+14:48:14.9081 => [ERROR] [UiPath.Studio.exe] [1] Error while getting window handle: System.ArgumentNullException: Value cannot be null.
+Parameter name: window
+   at System.Windows.Interop.WindowInteropHelper..ctor(Window window)
+   at UiPath.NativeWindow.GetIntPtr(Window window).
+14:48:16.8205 => [ERROR] [UiPath.Studio.exe] [1] Error while getting window handle: System.ArgumentNullException: Value cannot be null.
+Parameter name: window
+   at System.Windows.Interop.WindowInteropHelper..ctor(Window window)
+   at UiPath.NativeWindow.GetIntPtr(Window window).
+14:48:16.8205 => [ERROR] [UiPath.Studio.exe] [1] Error while getting window handle: System.ArgumentNullException: Value cannot be null.
+Parameter name: window
+   at System.Windows.Interop.WindowInteropHelper..ctor(Window window)
+   at UiPath.NativeWindow.GetIntPtr(Window window).
+14:48:30.5430 => [ERROR] [UiPath.Studio.exe] [1] Error while getting window handle: System.ArgumentNullException: Value cannot be null.
+Parameter name: window
+   at System.Windows.Interop.WindowInteropHelper..ctor(Window window)
+   at UiPath.NativeWindow.GetIntPtr(Window window).
+14:48:32.5819 => [ERROR] [UiPath.Studio.exe] [1] Error while getting window handle: System.ArgumentNullException: Value cannot be null.
+Parameter name: window
+   at System.Windows.Interop.WindowInteropHelper..ctor(Window window)
+   at UiPath.NativeWindow.GetIntPtr(Window window).
+14:48:32.5819 => [ERROR] [UiPath.Studio.exe] [1] Error while getting window handle: System.ArgumentNullException: Value cannot be null.
+Parameter name: window
+   at System.Windows.Interop.WindowInteropHelper..ctor(Window window)
+   at UiPath.NativeWindow.GetIntPtr(Window window).
+14:48:43.2858 => [ERROR] [UiPath.Studio.exe] [1] Error while getting window handle: System.ArgumentNullException: Value cannot be null.
+Parameter name: window
+   at System.Windows.Interop.WindowInteropHelper..ctor(Window window)
+   at UiPath.NativeWindow.GetIntPtr(Window window).
+14:48:44.8040 => [ERROR] [UiPath.Studio.exe] [1] Error while getting window handle: System.ArgumentNullException: Value cannot be null.
+Parameter name: window
+   at System.Windows.Interop.WindowInteropHelper..ctor(Window window)
+   at UiPath.NativeWindow.GetIntPtr(Window window).
+14:48:44.8040 => [ERROR] [UiPath.Studio.exe] [1] Error while getting window handle: System.ArgumentNullException: Value cannot be null.
+Parameter name: window
+   at System.Windows.Interop.WindowInteropHelper..ctor(Window window)
+   at UiPath.NativeWindow.GetIntPtr(Window window).
+17:13:59.3971 => [ERROR] [UiPath.Studio.exe] [1] Could not find file 'C:\Users\Stuart\Documents\UiPath-RPA-Developer\ReFramework\UiDemo2\CalculateClientSecurityHash\System.Activities.InArgument`1[System.String]'.
+17:24:20.2700 => [ERROR] [UiPath.Studio.exe] [9] The process cannot access the file 'C:\Users\Stuart\Documents\UiPath-RPA-Developer\ReFramework\UiDemo2\CalculateClientSecurityHash\System1\System1NavigateToWorkItems.xaml' because it is being used by another process.
+17:24:41.0080 => [ERROR] [UiPath.Studio.exe] [1] Could not find file 'C:\Users\Stuart\Documents\UiPath-RPA-Developer\ReFramework\UiDemo2\CalculateClientSecurityHash\System.Activities.InArgument`1[System.String]'.
+17:27:06.2298 => [ERROR] [UiPath.Studio.exe] [1] Error while getting window handle: System.ArgumentNullException: Value cannot be null.
+Parameter name: window
+   at System.Windows.Interop.WindowInteropHelper..ctor(Window window)
+   at UiPath.NativeWindow.GetIntPtr(Window window).
+17:27:08.5328 => [ERROR] [UiPath.Studio.exe] [1] Error while getting window handle: System.ArgumentNullException: Value cannot be null.
+Parameter name: window
+   at System.Windows.Interop.WindowInteropHelper..ctor(Window window)
+   at UiPath.NativeWindow.GetIntPtr(Window window).
+17:27:08.5328 => [ERROR] [UiPath.Studio.exe] [1] Error while getting window handle: System.ArgumentNullException: Value cannot be null.
+Parameter name: window
+   at System.Windows.Interop.WindowInteropHelper..ctor(Window window)
+   at UiPath.NativeWindow.GetIntPtr(Window window).
+17:27:16.8915 => [ERROR] [UiPath.Studio.exe] [80] The process cannot access the file 'C:\Users\Stuart\Documents\UiPath-RPA-Developer\ReFramework\UiDemo2\CalculateClientSecurityHash\System1\System1NavigateToWorkItems.xaml' because it is being used by another process.
+17:30:06.2438 => [WARN] [UiPath.Studio.exe] [1] XamlMigration: removed reference System.Runtime.WindowsRuntime
+17:32:56.4443 => [ERROR] [UiPath.Studio.exe] [1] Error while getting window handle: System.ArgumentNullException: Value cannot be null.
+Parameter name: window
+   at System.Windows.Interop.WindowInteropHelper..ctor(Window window)
+   at UiPath.NativeWindow.GetIntPtr(Window window).
+17:32:58.6148 => [ERROR] [UiPath.Studio.exe] [1] Error while getting window handle: System.ArgumentNullException: Value cannot be null.
+Parameter name: window
+   at System.Windows.Interop.WindowInteropHelper..ctor(Window window)
+   at UiPath.NativeWindow.GetIntPtr(Window window).
+17:32:58.6148 => [ERROR] [UiPath.Studio.exe] [1] Error while getting window handle: System.ArgumentNullException: Value cannot be null.
+Parameter name: window
+   at System.Windows.Interop.WindowInteropHelper..ctor(Window window)
+   at UiPath.NativeWindow.GetIntPtr(Window window).
+17:33:03.4888 => [ERROR] [UiPath.Studio.exe] [57] The process cannot access the file 'C:\Users\Stuart\Documents\UiPath-RPA-Developer\ReFramework\UiDemo2\CalculateClientSecurityHash\SHA1Online\Sha1Logoff.xaml' because it is being used by another process.
+17:33:39.4237 => [ERROR] [UiPath.Studio.exe] [1] Error while getting window handle: System.ArgumentNullException: Value cannot be null.
+Parameter name: window
+   at System.Windows.Interop.WindowInteropHelper..ctor(Window window)
+   at UiPath.NativeWindow.GetIntPtr(Window window).
+17:33:41.5001 => [ERROR] [UiPath.Studio.exe] [1] Error while getting window handle: System.ArgumentNullException: Value cannot be null.
+Parameter name: window
+   at System.Windows.Interop.WindowInteropHelper..ctor(Window window)
+   at UiPath.NativeWindow.GetIntPtr(Window window).
+17:33:41.5001 => [ERROR] [UiPath.Studio.exe] [1] Error while getting window handle: System.ArgumentNullException: Value cannot be null.
+Parameter name: window
+   at System.Windows.Interop.WindowInteropHelper..ctor(Window window)
+   at UiPath.NativeWindow.GetIntPtr(Window window).
+17:33:47.6091 => [ERROR] [UiPath.Studio.exe] [82] The process cannot access the file 'C:\Users\Stuart\Documents\UiPath-RPA-Developer\ReFramework\UiDemo2\CalculateClientSecurityHash\SHA1Online\Sha1Logoff.xaml' because it is being used by another process.
+19:10:01.8175 => [ERROR] [UiPath.Studio.exe] [30] The process cannot access the file 'C:\Users\Stuart\Documents\UiPath-RPA-Developer\ReFramework\UiDemo2\CalculateClientSecurityHash\Framework\InitAllApplications.xaml' because it is being used by another process.
+19:10:01.8175 => [ERROR] [UiPath.Studio.exe] [14] The process cannot access the file 'C:\Users\Stuart\Documents\UiPath-RPA-Developer\ReFramework\UiDemo2\CalculateClientSecurityHash\Framework\InitAllApplications.xaml' because it is being used by another process.
+19:14:34.7420 => [ERROR] [UiPath.Studio.exe] [76] The process cannot access the file 'C:\Users\Stuart\Documents\UiPath-RPA-Developer\ReFramework\UiDemo2\CalculateClientSecurityHash\System1\System1GetWI5Items.xaml' because it is being used by another process.
+19:14:34.7420 => [ERROR] [UiPath.Studio.exe] [56] The process cannot access the file 'C:\Users\Stuart\Documents\UiPath-RPA-Developer\ReFramework\UiDemo2\CalculateClientSecurityHash\System1\System1GetWI5Items.xaml' because it is being used by another process.
+19:14:34.7420 => [ERROR] [UiPath.Studio.exe] [14] The process cannot access the file 'C:\Users\Stuart\Documents\UiPath-RPA-Developer\ReFramework\UiDemo2\CalculateClientSecurityHash\System1\System1GetWI5Items.xaml' because it is being used by another process.
+19:14:34.7420 => [ERROR] [UiPath.Studio.exe] [32] The process cannot access the file 'C:\Users\Stuart\Documents\UiPath-RPA-Developer\ReFramework\UiDemo2\CalculateClientSecurityHash\System1\System1GetWI5Items.xaml' because it is being used by another process.
+19:19:54.1511 => [ERROR] [UiPath.Studio.exe] [79] The process cannot access the file 'C:\Users\Stuart\Documents\UiPath-RPA-Developer\ReFramework\UiDemo2\CalculateClientSecurityHash\Framework\InitAllApplications.xaml' because it is being used by another process.
+19:19:54.1511 => [ERROR] [UiPath.Studio.exe] [3] The process cannot access the file 'C:\Users\Stuart\Documents\UiPath-RPA-Developer\ReFramework\UiDemo2\CalculateClientSecurityHash\Framework\InitAllApplications.xaml' because it is being used by another process.
+19:19:59.3782 => [WARN] [UiPath.Studio.exe] [1] XamlMigration: removed reference System.Runtime.WindowsRuntime
+19:20:05.9615 => [ERROR] [UiPath.Studio.exe] [25] System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Nito.AsyncEx.TaskExtensions.<DoWaitAsync>d__3`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd(Task task)
+   at UiPath.Ipc.ServiceClient`1.<>c__DisplayClass17_0`1.<<InvokeAsync>b__3>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Ipc.IOHelpers.<WithResult>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Ipc.IOHelpers.<WithTimeout>d__11`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at UiPath.Ipc.ServiceClient`1.<>c__DisplayClass17_0`1.<InvokeAsync>b__4(Exception ex)
+   at UiPath.Ipc.IOHelpers.<WithTimeout>d__11`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Ipc.ServiceClient`1.<>c__DisplayClass17_0`1.<<InvokeAsync>b__2>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Ipc.ServiceClient`1.<InvokeAsync>d__17`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Studio.Plugin.Workflow.Robot.Services.RobotStudioBridge.<GetLocalsAsync>d__20.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Studio.Plugin.Workflow.Debugger.Locals.Services.ProjectLocalsService.<UpdateCachedLocalsAsync>d__40.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Studio.Plugin.Workflow.Debugger.Locals.Services.ProjectLocalsService.<GetLocalsAsync>d__39.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Studio.Plugin.Workflow.Debugger.Locals.Services.ProjectLocalsService.<UpdateAsync>d__25.MoveNext(), HResult -2146233029
+19:20:06.5535 => [ERROR] [UiPath.Studio.exe] [14] System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Nito.AsyncEx.TaskExtensions.<DoWaitAsync>d__3`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd(Task task)
+   at UiPath.Ipc.ServiceClient`1.<>c__DisplayClass17_0`1.<<InvokeAsync>b__3>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Ipc.IOHelpers.<WithResult>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Ipc.IOHelpers.<WithTimeout>d__11`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at UiPath.Ipc.ServiceClient`1.<>c__DisplayClass17_0`1.<InvokeAsync>b__4(Exception ex)
+   at UiPath.Ipc.IOHelpers.<WithTimeout>d__11`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Ipc.ServiceClient`1.<>c__DisplayClass17_0`1.<<InvokeAsync>b__2>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Ipc.ServiceClient`1.<InvokeAsync>d__17`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Studio.Plugin.Workflow.Robot.Services.RobotStudioBridge.<GetLocalsAsync>d__20.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Studio.Plugin.Workflow.Debugger.Locals.Services.ProjectLocalsService.<UpdateCachedLocalsAsync>d__40.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Studio.Plugin.Workflow.Debugger.Locals.Services.ProjectLocalsService.<GetLocalsAsync>d__39.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Studio.Plugin.Workflow.Debugger.Locals.Services.ProjectLocalsService.<UpdateAsync>d__25.MoveNext(), HResult -2146233029
+19:20:56.0358 => [ERROR] [UiPath.Studio.Shared.Logging.OutputLogger] [21] Attach Browser 'chrome.exe ACME': Cannot find the UI element corresponding to this selector: <html app='chrome.exe' title='ACME System 1 - Work Items' />
+19:22:19.2383 => [ERROR] [UiPath.Studio.exe] [33] The process cannot access the file 'C:\Users\Stuart\Documents\UiPath-RPA-Developer\ReFramework\UiDemo2\CalculateClientSecurityHash\System1\System1NavigateToWorkItems.xaml' because it is being used by another process.
+19:22:19.2383 => [ERROR] [UiPath.Studio.exe] [49] The process cannot access the file 'C:\Users\Stuart\Documents\UiPath-RPA-Developer\ReFramework\UiDemo2\CalculateClientSecurityHash\System1\System1NavigateToWorkItems.xaml' because it is being used by another process.
+19:22:19.2383 => [ERROR] [UiPath.Studio.exe] [40] The process cannot access the file 'C:\Users\Stuart\Documents\UiPath-RPA-Developer\ReFramework\UiDemo2\CalculateClientSecurityHash\System1\System1NavigateToWorkItems.xaml' because it is being used by another process.
+19:22:19.2383 => [ERROR] [UiPath.Studio.exe] [19] The process cannot access the file 'C:\Users\Stuart\Documents\UiPath-RPA-Developer\ReFramework\UiDemo2\CalculateClientSecurityHash\System1\System1NavigateToWorkItems.xaml' because it is being used by another process.
+19:22:36.3270 => [WARN] [UiPath.Studio.exe] [1] XamlMigration: removed reference System.Runtime.WindowsRuntime
+19:33:17.5302 => [ERROR] [UiPath.Studio.exe] [21] The process cannot access the file 'C:\Users\Stuart\Documents\UiPath-RPA-Developer\ReFramework\UiDemo2\CalculateClientSecurityHash\System1\System1GetWI5Items.xaml' because it is being used by another process.
+19:33:17.5302 => [ERROR] [UiPath.Studio.exe] [69] The process cannot access the file 'C:\Users\Stuart\Documents\UiPath-RPA-Developer\ReFramework\UiDemo2\CalculateClientSecurityHash\System1\System1GetWI5Items.xaml' because it is being used by another process.
+19:33:17.5302 => [ERROR] [UiPath.Studio.exe] [21] The process cannot access the file 'C:\Users\Stuart\Documents\UiPath-RPA-Developer\ReFramework\UiDemo2\CalculateClientSecurityHash\System1\System1GetWI5Items.xaml' because it is being used by another process.
+19:33:17.5302 => [ERROR] [UiPath.Studio.exe] [81] The process cannot access the file 'C:\Users\Stuart\Documents\UiPath-RPA-Developer\ReFramework\UiDemo2\CalculateClientSecurityHash\System1\System1GetWI5Items.xaml' because it is being used by another process.
+19:33:17.5302 => [ERROR] [UiPath.Studio.exe] [49] The process cannot access the file 'C:\Users\Stuart\Documents\UiPath-RPA-Developer\ReFramework\UiDemo2\CalculateClientSecurityHash\System1\System1GetWI5Items.xaml' because it is being used by another process.
+19:34:04.2471 => [ERROR] [UiPath.Studio.exe] [69] The process cannot access the file 'C:\Users\Stuart\Documents\UiPath-RPA-Developer\ReFramework\UiDemo2\CalculateClientSecurityHash\Framework\InitAllApplications.xaml' because it is being used by another process.
+19:34:04.2471 => [ERROR] [UiPath.Studio.exe] [81] The process cannot access the file 'C:\Users\Stuart\Documents\UiPath-RPA-Developer\ReFramework\UiDemo2\CalculateClientSecurityHash\Framework\InitAllApplications.xaml' because it is being used by another process.
+19:34:21.9293 => [ERROR] [UiPath.Studio.exe] [49] The process cannot access the file 'C:\Users\Stuart\Documents\UiPath-RPA-Developer\ReFramework\UiDemo2\CalculateClientSecurityHash\Framework\InitAllApplications.xaml' because it is being used by another process.
+19:34:21.9293 => [ERROR] [UiPath.Studio.exe] [69] The process cannot access the file 'C:\Users\Stuart\Documents\UiPath-RPA-Developer\ReFramework\UiDemo2\CalculateClientSecurityHash\Framework\InitAllApplications.xaml' because it is being used by another process.
+19:34:29.2146 => [WARN] [UiPath.Studio.exe] [1] XamlMigration: removed reference System.Runtime.WindowsRuntime
+19:37:52.9978 => [ERROR] [UiPath.Studio.exe] [28] The process cannot access the file 'C:\Users\Stuart\Documents\UiPath-RPA-Developer\ReFramework\UiDemo2\CalculateClientSecurityHash\System1\System1GetWI5Items.xaml' because it is being used by another process.
+19:37:52.9978 => [ERROR] [UiPath.Studio.exe] [49] The process cannot access the file 'C:\Users\Stuart\Documents\UiPath-RPA-Developer\ReFramework\UiDemo2\CalculateClientSecurityHash\System1\System1GetWI5Items.xaml' because it is being used by another process.
+19:37:52.9978 => [ERROR] [UiPath.Studio.exe] [33] The process cannot access the file 'C:\Users\Stuart\Documents\UiPath-RPA-Developer\ReFramework\UiDemo2\CalculateClientSecurityHash\System1\System1GetWI5Items.xaml' because it is being used by another process.
+19:37:52.9978 => [ERROR] [UiPath.Studio.exe] [28] The process cannot access the file 'C:\Users\Stuart\Documents\UiPath-RPA-Developer\ReFramework\UiDemo2\CalculateClientSecurityHash\System1\System1GetWI5Items.xaml' because it is being used by another process.
+19:37:52.9978 => [ERROR] [UiPath.Studio.exe] [31] The process cannot access the file 'C:\Users\Stuart\Documents\UiPath-RPA-Developer\ReFramework\UiDemo2\CalculateClientSecurityHash\System1\System1GetWI5Items.xaml' because it is being used by another process.
+19:37:55.5776 => [ERROR] [UiPath.Studio.exe] [33] The process cannot access the file 'C:\Users\Stuart\Documents\UiPath-RPA-Developer\ReFramework\UiDemo2\CalculateClientSecurityHash\Framework\InitAllApplications.xaml' because it is being used by another process.
+19:37:55.5776 => [ERROR] [UiPath.Studio.exe] [49] The process cannot access the file 'C:\Users\Stuart\Documents\UiPath-RPA-Developer\ReFramework\UiDemo2\CalculateClientSecurityHash\Framework\InitAllApplications.xaml' because it is being used by another process.
+19:37:59.5084 => [ERROR] [UiPath.Studio.exe] [31] The process cannot access the file 'C:\Users\Stuart\Documents\UiPath-RPA-Developer\ReFramework\UiDemo2\CalculateClientSecurityHash\Framework\InitAllApplications.xaml' because it is being used by another process.
+19:37:59.5084 => [ERROR] [UiPath.Studio.exe] [33] The process cannot access the file 'C:\Users\Stuart\Documents\UiPath-RPA-Developer\ReFramework\UiDemo2\CalculateClientSecurityHash\Framework\InitAllApplications.xaml' because it is being used by another process.
+19:43:31.9876 => [ERROR] [UiPath.Studio.exe] [69] The process cannot access the file 'C:\Users\Stuart\Documents\UiPath-RPA-Developer\ReFramework\UiDemo2\CalculateClientSecurityHash\Framework\InitAllApplications.xaml' because it is being used by another process.
+19:43:31.9876 => [ERROR] [UiPath.Studio.exe] [3] The process cannot access the file 'C:\Users\Stuart\Documents\UiPath-RPA-Developer\ReFramework\UiDemo2\CalculateClientSecurityHash\Framework\InitAllApplications.xaml' because it is being used by another process.
+19:43:31.9876 => [ERROR] [UiPath.Studio.exe] [40] The process cannot access the file 'C:\Users\Stuart\Documents\UiPath-RPA-Developer\ReFramework\UiDemo2\CalculateClientSecurityHash\Framework\InitAllApplications.xaml' because it is being used by another process.
+19:44:37.3571 => [ERROR] [UiPath.Studio.exe] [55] The process cannot access the file 'C:\Users\Stuart\Documents\UiPath-RPA-Developer\ReFramework\UiDemo2\CalculateClientSecurityHash\Framework\InitAllApplications.xaml' because it is being used by another process.
+19:44:37.3571 => [ERROR] [UiPath.Studio.exe] [59] The process cannot access the file 'C:\Users\Stuart\Documents\UiPath-RPA-Developer\ReFramework\UiDemo2\CalculateClientSecurityHash\Framework\InitAllApplications.xaml' because it is being used by another process.
+19:44:37.3571 => [ERROR] [UiPath.Studio.exe] [69] The process cannot access the file 'C:\Users\Stuart\Documents\UiPath-RPA-Developer\ReFramework\UiDemo2\CalculateClientSecurityHash\Framework\InitAllApplications.xaml' because it is being used by another process.
+19:48:50.8542 => [WARN] [UiPath.Studio.exe] [1] XamlMigration: removed reference System.Runtime.WindowsRuntime
+19:49:14.9477 => [WARN] [UiPath.Studio.exe] [1] XamlMigration: removed reference System.Runtime.WindowsRuntime
+19:58:01.6395 => [WARN] [UiPath.Studio.exe] [1] XamlMigration: removed reference System.Runtime.WindowsRuntime
+19:59:36.1855 => [ERROR] [UiPath.Studio.exe] [32] The process cannot access the file 'C:\Users\Stuart\Documents\UiPath-RPA-Developer\ReFramework\UiDemo2\CalculateClientSecurityHash\Framework\InitAllApplications.xaml' because it is being used by another process.
+19:59:36.1855 => [ERROR] [UiPath.Studio.exe] [81] The process cannot access the file 'C:\Users\Stuart\Documents\UiPath-RPA-Developer\ReFramework\UiDemo2\CalculateClientSecurityHash\Framework\InitAllApplications.xaml' because it is being used by another process.
+19:59:36.1855 => [ERROR] [UiPath.Studio.exe] [25] The process cannot access the file 'C:\Users\Stuart\Documents\UiPath-RPA-Developer\ReFramework\UiDemo2\CalculateClientSecurityHash\Framework\InitAllApplications.xaml' because it is being used by another process.
+19:59:36.1855 => [ERROR] [UiPath.Studio.exe] [24] The process cannot access the file 'C:\Users\Stuart\Documents\UiPath-RPA-Developer\ReFramework\UiDemo2\CalculateClientSecurityHash\Framework\InitAllApplications.xaml' because it is being used by another process.
+19:59:36.1855 => [ERROR] [UiPath.Studio.exe] [32] The process cannot access the file 'C:\Users\Stuart\Documents\UiPath-RPA-Developer\ReFramework\UiDemo2\CalculateClientSecurityHash\Framework\InitAllApplications.xaml' because it is being used by another process.
+19:59:36.1855 => [ERROR] [UiPath.Studio.exe] [81] The process cannot access the file 'C:\Users\Stuart\Documents\UiPath-RPA-Developer\ReFramework\UiDemo2\CalculateClientSecurityHash\Framework\InitAllApplications.xaml' because it is being used by another process.
+20:02:35.6878 => [WARN] [UiPath.Studio.exe] [1] XamlMigration: removed reference System.Runtime.WindowsRuntime
+20:05:58.7822 => [ERROR] [UiPath.Studio.exe] [32] The process cannot access the file 'C:\Users\Stuart\Documents\UiPath-RPA-Developer\ReFramework\UiDemo2\CalculateClientSecurityHash\Framework\InitAllApplications.xaml' because it is being used by another process.
+20:05:58.7822 => [ERROR] [UiPath.Studio.exe] [6] The process cannot access the file 'C:\Users\Stuart\Documents\UiPath-RPA-Developer\ReFramework\UiDemo2\CalculateClientSecurityHash\Framework\InitAllApplications.xaml' because it is being used by another process.
+20:05:58.7822 => [ERROR] [UiPath.Studio.exe] [32] The process cannot access the file 'C:\Users\Stuart\Documents\UiPath-RPA-Developer\ReFramework\UiDemo2\CalculateClientSecurityHash\Framework\InitAllApplications.xaml' because it is being used by another process.
+20:05:58.7822 => [ERROR] [UiPath.Studio.exe] [6] The process cannot access the file 'C:\Users\Stuart\Documents\UiPath-RPA-Developer\ReFramework\UiDemo2\CalculateClientSecurityHash\Framework\InitAllApplications.xaml' because it is being used by another process.
+20:05:58.7822 => [ERROR] [UiPath.Studio.exe] [34] The process cannot access the file 'C:\Users\Stuart\Documents\UiPath-RPA-Developer\ReFramework\UiDemo2\CalculateClientSecurityHash\Framework\InitAllApplications.xaml' because it is being used by another process.
+20:05:58.7822 => [ERROR] [UiPath.Studio.exe] [32] The process cannot access the file 'C:\Users\Stuart\Documents\UiPath-RPA-Developer\ReFramework\UiDemo2\CalculateClientSecurityHash\Framework\InitAllApplications.xaml' because it is being used by another process.
+20:05:58.7822 => [ERROR] [UiPath.Studio.exe] [24] The process cannot access the file 'C:\Users\Stuart\Documents\UiPath-RPA-Developer\ReFramework\UiDemo2\CalculateClientSecurityHash\Framework\InitAllApplications.xaml' because it is being used by another process.
+20:12:48.5380 => [ERROR] [UiPath.Studio.exe] [3] System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Nito.AsyncEx.TaskExtensions.<DoWaitAsync>d__3`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd(Task task)
+   at UiPath.Ipc.ServiceClient`1.<>c__DisplayClass17_0`1.<<InvokeAsync>b__3>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Ipc.IOHelpers.<WithResult>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Ipc.IOHelpers.<WithTimeout>d__11`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at UiPath.Ipc.ServiceClient`1.<>c__DisplayClass17_0`1.<InvokeAsync>b__4(Exception ex)
+   at UiPath.Ipc.IOHelpers.<WithTimeout>d__11`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Ipc.ServiceClient`1.<>c__DisplayClass17_0`1.<<InvokeAsync>b__2>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Ipc.ServiceClient`1.<InvokeAsync>d__17`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Studio.Plugin.Workflow.Robot.Services.RobotStudioBridge.<GetLocalsAsync>d__20.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Studio.Plugin.Workflow.Debugger.Locals.Services.ProjectLocalsService.<UpdateCachedLocalsAsync>d__40.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Studio.Plugin.Workflow.Debugger.Locals.Services.ProjectLocalsService.<GetLocalsAsync>d__39.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Studio.Plugin.Workflow.Debugger.Locals.Services.ProjectLocalsService.<UpdateAsync>d__25.MoveNext(), HResult -2146233029
+20:12:49.1587 => [ERROR] [UiPath.Studio.exe] [20] System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Nito.AsyncEx.TaskExtensions.<DoWaitAsync>d__3`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd(Task task)
+   at UiPath.Ipc.ServiceClient`1.<>c__DisplayClass17_0`1.<<InvokeAsync>b__3>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Ipc.IOHelpers.<WithResult>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Ipc.IOHelpers.<WithTimeout>d__11`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at UiPath.Ipc.ServiceClient`1.<>c__DisplayClass17_0`1.<InvokeAsync>b__4(Exception ex)
+   at UiPath.Ipc.IOHelpers.<WithTimeout>d__11`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Ipc.ServiceClient`1.<>c__DisplayClass17_0`1.<<InvokeAsync>b__2>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Ipc.ServiceClient`1.<InvokeAsync>d__17`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Studio.Plugin.Workflow.Robot.Services.RobotStudioBridge.<GetLocalsAsync>d__20.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Studio.Plugin.Workflow.Debugger.Locals.Services.ProjectLocalsService.<UpdateCachedLocalsAsync>d__40.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Studio.Plugin.Workflow.Debugger.Locals.Services.ProjectLocalsService.<GetLocalsAsync>d__39.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Studio.Plugin.Workflow.Debugger.Locals.Services.ProjectLocalsService.<UpdateAsync>d__25.MoveNext(), HResult -2146233029
+20:15:08.7391 => [ERROR] [UiPath.Studio.exe] [40] The process cannot access the file 'C:\Users\Stuart\Documents\UiPath-RPA-Developer\ReFramework\UiDemo2\CalculateClientSecurityHash\Framework\InitAllApplications.xaml' because it is being used by another process.
+20:15:08.7391 => [ERROR] [UiPath.Studio.exe] [49] The process cannot access the file 'C:\Users\Stuart\Documents\UiPath-RPA-Developer\ReFramework\UiDemo2\CalculateClientSecurityHash\Framework\InitAllApplications.xaml' because it is being used by another process.
+20:15:08.7391 => [ERROR] [UiPath.Studio.exe] [80] The process cannot access the file 'C:\Users\Stuart\Documents\UiPath-RPA-Developer\ReFramework\UiDemo2\CalculateClientSecurityHash\Framework\InitAllApplications.xaml' because it is being used by another process.
+20:15:08.7391 => [ERROR] [UiPath.Studio.exe] [40] The process cannot access the file 'C:\Users\Stuart\Documents\UiPath-RPA-Developer\ReFramework\UiDemo2\CalculateClientSecurityHash\Framework\InitAllApplications.xaml' because it is being used by another process.
+20:15:08.7391 => [ERROR] [UiPath.Studio.exe] [49] The process cannot access the file 'C:\Users\Stuart\Documents\UiPath-RPA-Developer\ReFramework\UiDemo2\CalculateClientSecurityHash\Framework\InitAllApplications.xaml' because it is being used by another process.
+20:15:08.7391 => [ERROR] [UiPath.Studio.exe] [80] The process cannot access the file 'C:\Users\Stuart\Documents\UiPath-RPA-Developer\ReFramework\UiDemo2\CalculateClientSecurityHash\Framework\InitAllApplications.xaml' because it is being used by another process.
+20:15:08.7391 => [ERROR] [UiPath.Studio.exe] [40] The process cannot access the file 'C:\Users\Stuart\Documents\UiPath-RPA-Developer\ReFramework\UiDemo2\CalculateClientSecurityHash\Framework\InitAllApplications.xaml' because it is being used by another process.
+20:15:08.7391 => [ERROR] [UiPath.Studio.exe] [69] The process cannot access the file 'C:\Users\Stuart\Documents\UiPath-RPA-Developer\ReFramework\UiDemo2\CalculateClientSecurityHash\Framework\InitAllApplications.xaml' because it is being used by another process.
+20:17:06.1936 => [ERROR] [UiPath.Studio.exe] [49] The process cannot access the file 'C:\Users\Stuart\Documents\UiPath-RPA-Developer\ReFramework\UiDemo2\CalculateClientSecurityHash\Framework\InitAllApplications.xaml' because it is being used by another process.
+20:17:06.1936 => [ERROR] [UiPath.Studio.exe] [56] The process cannot access the file 'C:\Users\Stuart\Documents\UiPath-RPA-Developer\ReFramework\UiDemo2\CalculateClientSecurityHash\Framework\InitAllApplications.xaml' because it is being used by another process.
+20:17:06.1936 => [ERROR] [UiPath.Studio.exe] [49] The process cannot access the file 'C:\Users\Stuart\Documents\UiPath-RPA-Developer\ReFramework\UiDemo2\CalculateClientSecurityHash\Framework\InitAllApplications.xaml' because it is being used by another process.
+20:17:06.1936 => [ERROR] [UiPath.Studio.exe] [56] The process cannot access the file 'C:\Users\Stuart\Documents\UiPath-RPA-Developer\ReFramework\UiDemo2\CalculateClientSecurityHash\Framework\InitAllApplications.xaml' because it is being used by another process.
+20:17:06.1936 => [ERROR] [UiPath.Studio.exe] [49] The process cannot access the file 'C:\Users\Stuart\Documents\UiPath-RPA-Developer\ReFramework\UiDemo2\CalculateClientSecurityHash\Framework\InitAllApplications.xaml' because it is being used by another process.
+20:17:06.1936 => [ERROR] [UiPath.Studio.exe] [21] The process cannot access the file 'C:\Users\Stuart\Documents\UiPath-RPA-Developer\ReFramework\UiDemo2\CalculateClientSecurityHash\Framework\InitAllApplications.xaml' because it is being used by another process.
+20:17:06.1936 => [ERROR] [UiPath.Studio.exe] [34] The process cannot access the file 'C:\Users\Stuart\Documents\UiPath-RPA-Developer\ReFramework\UiDemo2\CalculateClientSecurityHash\Framework\InitAllApplications.xaml' because it is being used by another process.
+20:17:06.1936 => [ERROR] [UiPath.Studio.exe] [56] The process cannot access the file 'C:\Users\Stuart\Documents\UiPath-RPA-Developer\ReFramework\UiDemo2\CalculateClientSecurityHash\Framework\InitAllApplications.xaml' because it is being used by another process.
+20:18:00.9879 => [ERROR] [UiPath.Studio.exe] [14] System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Nito.AsyncEx.TaskExtensions.<DoWaitAsync>d__3`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd(Task task)
+   at UiPath.Ipc.ServiceClient`1.<>c__DisplayClass17_0`1.<<InvokeAsync>b__3>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Ipc.IOHelpers.<WithResult>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Ipc.IOHelpers.<WithTimeout>d__11`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at UiPath.Ipc.ServiceClient`1.<>c__DisplayClass17_0`1.<InvokeAsync>b__4(Exception ex)
+   at UiPath.Ipc.IOHelpers.<WithTimeout>d__11`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Ipc.ServiceClient`1.<>c__DisplayClass17_0`1.<<InvokeAsync>b__2>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Ipc.ServiceClient`1.<InvokeAsync>d__17`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Studio.Plugin.Workflow.Robot.Services.RobotStudioBridge.<GetLocalsAsync>d__20.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Studio.Plugin.Workflow.Debugger.Locals.Services.ProjectLocalsService.<UpdateCachedLocalsAsync>d__40.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Studio.Plugin.Workflow.Debugger.Locals.Services.ProjectLocalsService.<GetLocalsAsync>d__39.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Studio.Plugin.Workflow.Debugger.Locals.Services.ProjectLocalsService.<UpdateAsync>d__25.MoveNext(), HResult -2146233029
+20:18:16.7253 => [ERROR] [UiPath.Studio.exe] [80] System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Nito.AsyncEx.TaskExtensions.<DoWaitAsync>d__3`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd(Task task)
+   at UiPath.Ipc.ServiceClient`1.<>c__DisplayClass17_0`1.<<InvokeAsync>b__3>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Ipc.IOHelpers.<WithResult>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Ipc.IOHelpers.<WithTimeout>d__11`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at UiPath.Ipc.ServiceClient`1.<>c__DisplayClass17_0`1.<InvokeAsync>b__4(Exception ex)
+   at UiPath.Ipc.IOHelpers.<WithTimeout>d__11`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Ipc.ServiceClient`1.<>c__DisplayClass17_0`1.<<InvokeAsync>b__2>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Ipc.ServiceClient`1.<InvokeAsync>d__17`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Studio.Plugin.Workflow.Robot.Services.RobotStudioBridge.<GetLocalsAsync>d__20.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Studio.Plugin.Workflow.Debugger.Locals.Services.ProjectLocalsService.<UpdateCachedLocalsAsync>d__40.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Studio.Plugin.Workflow.Debugger.Locals.Services.ProjectLocalsService.<GetLocalsAsync>d__39.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Studio.Plugin.Workflow.Debugger.Locals.Services.ProjectLocalsService.<UpdateAsync>d__25.MoveNext(), HResult -2146233029
+20:19:44.2515 => [ERROR] [UiPath.Studio.exe] [80] System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Ipc.ServiceClient`1.<>c__DisplayClass17_0`1.<<InvokeAsync>b__3>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Ipc.IOHelpers.<WithResult>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Ipc.IOHelpers.<WithTimeout>d__11`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at UiPath.Ipc.ServiceClient`1.<>c__DisplayClass17_0`1.<InvokeAsync>b__4(Exception ex)
+   at UiPath.Ipc.IOHelpers.<WithTimeout>d__11`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Ipc.ServiceClient`1.<>c__DisplayClass17_0`1.<<InvokeAsync>b__2>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Ipc.ServiceClient`1.<InvokeAsync>d__17`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Studio.Plugin.Workflow.Robot.Services.RobotStudioBridge.<GetLocalsAsync>d__20.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Studio.Plugin.Workflow.Debugger.Locals.Services.ProjectLocalsService.<UpdateCachedLocalsAsync>d__40.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Studio.Plugin.Workflow.Debugger.Locals.Services.ProjectLocalsService.<GetLocalsAsync>d__39.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Studio.Plugin.Workflow.Debugger.Locals.Services.ProjectLocalsService.<UpdateAsync>d__25.MoveNext(), HResult -2146233029
+20:20:41.2033 => [ERROR] [UiPath.Studio.exe] [6] System.ObjectDisposedException: Cannot access a closed pipe.
+   at System.IO.__Error.PipeNotOpen()
+   at System.IO.Pipes.PipeStream.CheckWriteOperations()
+   at System.IO.Pipes.PipeStream.BeginWrite(Byte[] buffer, Int32 offset, Int32 count, AsyncCallback callback, Object state)
+   at System.IO.Stream.<>c.<BeginEndWriteAsync>b__53_0(Stream stream, ReadWriteParameters args, AsyncCallback callback, Object state)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncTrim[TInstance,TArgs](TInstance thisRef, TArgs args, Func`5 beginMethod, Func`3 endMethod)
+   at System.IO.Stream.BeginEndWriteAsync(Byte[] buffer, Int32 offset, Int32 count)
+   at System.IO.Stream.WriteAsync(Byte[] buffer, Int32 offset, Int32 count, CancellationToken cancellationToken)
+   at UiPath.Ipc.IOHelpers.<WriteMessage>d__13.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Ipc.Connection.<SendMessage>d__26.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Nito.AsyncEx.TaskExtensions.<DoWaitAsync>d__1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Ipc.ServiceClient`1.<>c__DisplayClass17_0`1.<<InvokeAsync>b__3>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Ipc.IOHelpers.<WithResult>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Ipc.IOHelpers.<WithTimeout>d__11`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at UiPath.Ipc.ServiceClient`1.<>c__DisplayClass17_0`1.<InvokeAsync>b__4(Exception ex)
+   at UiPath.Ipc.IOHelpers.<WithTimeout>d__11`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Ipc.ServiceClient`1.<>c__DisplayClass17_0`1.<<InvokeAsync>b__2>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Ipc.ServiceClient`1.<InvokeAsync>d__17`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Studio.Plugin.Workflow.Robot.Services.RobotStudioBridge.<ResumeJob>d__17.MoveNext()
+20:21:35.2334 => [WARN] [UiPath.Studio.exe] [1] XamlMigration: removed reference System.Runtime.WindowsRuntime
+20:21:58.0320 => [ERROR] [UiPath.Studio.exe] [59] The process cannot access the file 'C:\Users\Stuart\Documents\UiPath-RPA-Developer\ReFramework\UiDemo2\CalculateClientSecurityHash\System1\System1GetWI5Items.xaml' because it is being used by another process.
+20:21:58.0320 => [ERROR] [UiPath.Studio.exe] [49] The process cannot access the file 'C:\Users\Stuart\Documents\UiPath-RPA-Developer\ReFramework\UiDemo2\CalculateClientSecurityHash\System1\System1GetWI5Items.xaml' because it is being used by another process.
+20:21:58.0320 => [ERROR] [UiPath.Studio.exe] [59] The process cannot access the file 'C:\Users\Stuart\Documents\UiPath-RPA-Developer\ReFramework\UiDemo2\CalculateClientSecurityHash\System1\System1GetWI5Items.xaml' because it is being used by another process.
+20:21:58.0320 => [ERROR] [UiPath.Studio.exe] [49] The process cannot access the file 'C:\Users\Stuart\Documents\UiPath-RPA-Developer\ReFramework\UiDemo2\CalculateClientSecurityHash\System1\System1GetWI5Items.xaml' because it is being used by another process.
+20:21:58.0320 => [ERROR] [UiPath.Studio.exe] [59] The process cannot access the file 'C:\Users\Stuart\Documents\UiPath-RPA-Developer\ReFramework\UiDemo2\CalculateClientSecurityHash\System1\System1GetWI5Items.xaml' because it is being used by another process.
+20:21:58.0320 => [ERROR] [UiPath.Studio.exe] [3] The process cannot access the file 'C:\Users\Stuart\Documents\UiPath-RPA-Developer\ReFramework\UiDemo2\CalculateClientSecurityHash\System1\System1GetWI5Items.xaml' because it is being used by another process.
+20:24:58.3009 => [ERROR] [UiPath.Studio.exe] [33] The process cannot access the file 'C:\Users\Stuart\Documents\UiPath-RPA-Developer\ReFramework\UiDemo2\CalculateClientSecurityHash\System1\System1GetWI5Items.xaml' because it is being used by another process.
+20:24:58.3009 => [ERROR] [UiPath.Studio.exe] [30] The process cannot access the file 'C:\Users\Stuart\Documents\UiPath-RPA-Developer\ReFramework\UiDemo2\CalculateClientSecurityHash\System1\System1GetWI5Items.xaml' because it is being used by another process.
+20:24:58.3009 => [ERROR] [UiPath.Studio.exe] [69] The process cannot access the file 'C:\Users\Stuart\Documents\UiPath-RPA-Developer\ReFramework\UiDemo2\CalculateClientSecurityHash\System1\System1GetWI5Items.xaml' because it is being used by another process.
+20:24:58.3009 => [ERROR] [UiPath.Studio.exe] [33] The process cannot access the file 'C:\Users\Stuart\Documents\UiPath-RPA-Developer\ReFramework\UiDemo2\CalculateClientSecurityHash\System1\System1GetWI5Items.xaml' because it is being used by another process.
+20:24:58.3009 => [ERROR] [UiPath.Studio.exe] [30] The process cannot access the file 'C:\Users\Stuart\Documents\UiPath-RPA-Developer\ReFramework\UiDemo2\CalculateClientSecurityHash\System1\System1GetWI5Items.xaml' because it is being used by another process.
+20:24:58.3009 => [ERROR] [UiPath.Studio.exe] [69] The process cannot access the file 'C:\Users\Stuart\Documents\UiPath-RPA-Developer\ReFramework\UiDemo2\CalculateClientSecurityHash\System1\System1GetWI5Items.xaml' because it is being used by another process.
+20:24:58.3009 => [ERROR] [UiPath.Studio.exe] [63] The process cannot access the file 'C:\Users\Stuart\Documents\UiPath-RPA-Developer\ReFramework\UiDemo2\CalculateClientSecurityHash\System1\System1GetWI5Items.xaml' because it is being used by another process.
+20:24:59.3884 => [ERROR] [UiPath.Studio.exe] [63] The process cannot access the file 'C:\Users\Stuart\Documents\UiPath-RPA-Developer\ReFramework\UiDemo2\CalculateClientSecurityHash\Framework\GetTransactionData.xaml' because it is being used by another process.
+20:43:41.2565 => [ERROR] [UiPath.Studio.exe] [7] The process cannot access the file 'C:\Users\Stuart\Documents\UiPath-RPA-Developer\ReFramework\UiDemo2\CalculateClientSecurityHash\Framework\GetTransactionData.xaml' because it is being used by another process.
+20:43:41.6045 => [ERROR] [UiPath.Studio.Shared.Logging.OutputLogger] [79] Framework/GetTransactionData.xaml: Compiler error(s) encountered processing expression "out_TransactionItem("WIID")".
+Class 'UiPath.Core.QueueItem' cannot be indexed because it has no default property.
+20:46:45.3775 => [ERROR] [UiPath.Studio.exe] [25] The process cannot access the file 'C:\Users\Stuart\Documents\UiPath-RPA-Developer\ReFramework\UiDemo2\CalculateClientSecurityHash\Framework\GetTransactionData.xaml' because it is being used by another process.
+20:47:36.8183 => [ERROR] [UiPath.Studio.exe] [79] System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Nito.AsyncEx.TaskExtensions.<DoWaitAsync>d__3`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd(Task task)
+   at UiPath.Ipc.ServiceClient`1.<>c__DisplayClass17_0`1.<<InvokeAsync>b__3>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Ipc.IOHelpers.<WithResult>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Ipc.IOHelpers.<WithTimeout>d__11`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at UiPath.Ipc.ServiceClient`1.<>c__DisplayClass17_0`1.<InvokeAsync>b__4(Exception ex)
+   at UiPath.Ipc.IOHelpers.<WithTimeout>d__11`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Ipc.ServiceClient`1.<>c__DisplayClass17_0`1.<<InvokeAsync>b__2>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Ipc.ServiceClient`1.<InvokeAsync>d__17`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Studio.Plugin.Workflow.Robot.Services.RobotStudioBridge.<GetLocalsAsync>d__20.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Studio.Plugin.Workflow.Debugger.Locals.Services.ProjectLocalsService.<UpdateCachedLocalsAsync>d__40.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Studio.Plugin.Workflow.Debugger.Locals.Services.ProjectLocalsService.<GetLocalsAsync>d__39.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Studio.Plugin.Workflow.Debugger.Locals.Services.ProjectLocalsService.<UpdateAsync>d__25.MoveNext(), HResult -2146233029
+20:48:11.6504 => [WARN] [UiPath.Studio.exe] [1] XamlMigration: removed reference System.Runtime.WindowsRuntime
+20:48:18.9698 => [ERROR] [UiPath.Studio.exe] [19] System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Nito.AsyncEx.TaskExtensions.<DoWaitAsync>d__3`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd(Task task)
+   at UiPath.Ipc.ServiceClient`1.<>c__DisplayClass17_0`1.<<InvokeAsync>b__3>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Ipc.IOHelpers.<WithResult>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Ipc.IOHelpers.<WithTimeout>d__11`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at UiPath.Ipc.ServiceClient`1.<>c__DisplayClass17_0`1.<InvokeAsync>b__4(Exception ex)
+   at UiPath.Ipc.IOHelpers.<WithTimeout>d__11`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Ipc.ServiceClient`1.<>c__DisplayClass17_0`1.<<InvokeAsync>b__2>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Ipc.ServiceClient`1.<InvokeAsync>d__17`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Studio.Plugin.Workflow.Robot.Services.RobotStudioBridge.<GetLocalsAsync>d__20.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Studio.Plugin.Workflow.Debugger.Locals.Services.ProjectLocalsService.<UpdateCachedLocalsAsync>d__40.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Studio.Plugin.Workflow.Debugger.Locals.Services.ProjectLocalsService.<GetLocalsAsync>d__39.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Studio.Plugin.Workflow.Debugger.Locals.Services.ProjectLocalsService.<UpdateAsync>d__25.MoveNext(), HResult -2146233029
+20:48:19.5920 => [ERROR] [UiPath.Studio.exe] [79] System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Nito.AsyncEx.TaskExtensions.<DoWaitAsync>d__3`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd(Task task)
+   at UiPath.Ipc.ServiceClient`1.<>c__DisplayClass17_0`1.<<InvokeAsync>b__3>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Ipc.IOHelpers.<WithResult>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Ipc.IOHelpers.<WithTimeout>d__11`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at UiPath.Ipc.ServiceClient`1.<>c__DisplayClass17_0`1.<InvokeAsync>b__4(Exception ex)
+   at UiPath.Ipc.IOHelpers.<WithTimeout>d__11`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Ipc.ServiceClient`1.<>c__DisplayClass17_0`1.<<InvokeAsync>b__2>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Ipc.ServiceClient`1.<InvokeAsync>d__17`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Studio.Plugin.Workflow.Robot.Services.RobotStudioBridge.<GetLocalsAsync>d__20.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Studio.Plugin.Workflow.Debugger.Locals.Services.ProjectLocalsService.<UpdateCachedLocalsAsync>d__40.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Studio.Plugin.Workflow.Debugger.Locals.Services.ProjectLocalsService.<GetLocalsAsync>d__39.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Studio.Plugin.Workflow.Debugger.Locals.Services.ProjectLocalsService.<UpdateAsync>d__25.MoveNext(), HResult -2146233029
+20:49:56.3670 => [ERROR] [UiPath.Studio.Shared.Logging.OutputLogger] [23] Attach Browser 'chrome.exe ACME': Cannot find the UI element corresponding to this selector: <html app='chrome.exe' title='ACME System 1 - *' idx='2' />
+20:49:59.4354 => [ERROR] [UiPath.Studio.Shared.Logging.OutputLogger] [35] System1LogOff: Cannot find the UI element corresponding to this selector: <html app='chrome.exe' title='ACME System 1 - *' idx='2' />
+20:50:03.0041 => [ERROR] [UiPath.Studio.Shared.Logging.OutputLogger] [55] Attach Browser 'chrome.exe ACME': Cannot find the UI element corresponding to this selector: <html app='chrome.exe' title='ACME System 1 - *' idx='2' />
+20:50:03.4051 => [ERROR] [UiPath.Studio.Shared.Logging.OutputLogger] [20] Invoke System1LogOff workflow: Cannot find the UI element corresponding to this selector: <html app='chrome.exe' title='ACME System 1 - *' idx='2' />
+20:50:07.4546 => [ERROR] [UiPath.Studio.Shared.Logging.OutputLogger] [81] Normal App Closing Sequence: Cannot find the UI element corresponding to this selector: <html app='chrome.exe' title='ACME System 1 - *' idx='2' />
+20:50:08.6373 => [ERROR] [UiPath.Studio.Shared.Logging.OutputLogger] [19] Invoke System1LogOff workflow: Cannot find the UI element corresponding to this selector: <html app='chrome.exe' title='ACME System 1 - *' idx='2' />
+20:50:09.0603 => [ERROR] [UiPath.Studio.Shared.Logging.OutputLogger] [14] Invoke CloseAllApplications workflow: Cannot find the UI element corresponding to this selector: <html app='chrome.exe' title='ACME System 1 - *' idx='2' />
+20:50:22.2411 => [WARN] [UiPath.Studio.Shared.Logging.OutputLogger] [34] Applications failed to close normally. Cannot find the UI element corresponding to this selector: <html app='chrome.exe' title='ACME System 1 - *' idx='2' /> at Source: Invoke System1LogOff workflow: Attach Browser 'chrome.exe ACME'
+20:51:46.7350 => [WARN] [UiPath.Studio.exe] [1] XamlMigration: removed reference System.Runtime.WindowsRuntime
+20:56:34.6644 => [WARN] [UiPath.Studio.exe] [1] XamlMigration: removed reference System.Runtime.WindowsRuntime
+20:56:41.6279 => [ERROR] [UiPath.Studio.exe] [76] System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Nito.AsyncEx.TaskExtensions.<DoWaitAsync>d__3`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd(Task task)
+   at UiPath.Ipc.ServiceClient`1.<>c__DisplayClass17_0`1.<<InvokeAsync>b__3>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Ipc.IOHelpers.<WithResult>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Ipc.IOHelpers.<WithTimeout>d__11`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at UiPath.Ipc.ServiceClient`1.<>c__DisplayClass17_0`1.<InvokeAsync>b__4(Exception ex)
+   at UiPath.Ipc.IOHelpers.<WithTimeout>d__11`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Ipc.ServiceClient`1.<>c__DisplayClass17_0`1.<<InvokeAsync>b__2>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Ipc.ServiceClient`1.<InvokeAsync>d__17`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Studio.Plugin.Workflow.Robot.Services.RobotStudioBridge.<GetLocalsAsync>d__20.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Studio.Plugin.Workflow.Debugger.Locals.Services.ProjectLocalsService.<UpdateCachedLocalsAsync>d__40.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Studio.Plugin.Workflow.Debugger.Locals.Services.ProjectLocalsService.<GetLocalsAsync>d__39.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Studio.Plugin.Workflow.Debugger.Locals.Services.ProjectLocalsService.<UpdateAsync>d__25.MoveNext(), HResult -2146233029
+20:56:41.9780 => [ERROR] [UiPath.Studio.exe] [48] System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Nito.AsyncEx.TaskExtensions.<DoWaitAsync>d__3`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd(Task task)
+   at UiPath.Ipc.ServiceClient`1.<>c__DisplayClass17_0`1.<<InvokeAsync>b__3>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Ipc.IOHelpers.<WithResult>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Ipc.IOHelpers.<WithTimeout>d__11`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at UiPath.Ipc.ServiceClient`1.<>c__DisplayClass17_0`1.<InvokeAsync>b__4(Exception ex)
+   at UiPath.Ipc.IOHelpers.<WithTimeout>d__11`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Ipc.ServiceClient`1.<>c__DisplayClass17_0`1.<<InvokeAsync>b__2>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Ipc.ServiceClient`1.<InvokeAsync>d__17`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Studio.Plugin.Workflow.Robot.Services.RobotStudioBridge.<GetLocalsAsync>d__20.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Studio.Plugin.Workflow.Debugger.Locals.Services.ProjectLocalsService.<UpdateCachedLocalsAsync>d__40.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Studio.Plugin.Workflow.Debugger.Locals.Services.ProjectLocalsService.<GetLocalsAsync>d__39.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Studio.Plugin.Workflow.Debugger.Locals.Services.ProjectLocalsService.<UpdateAsync>d__25.MoveNext(), HResult -2146233029
+20:58:26.5582 => [ERROR] [UiPath.Studio.Shared.Logging.OutputLogger] [19] Attach Browser 'chrome.exe ACME': Cannot find the UI element corresponding to this selector: <html app='chrome.exe' title='ACME System 1 - *' idx='2' />
+21:00:41.0597 => [WARN] [UiPath.Studio.exe] [1] XamlMigration: removed reference System.Runtime.WindowsRuntime
+21:15:24.4924 => [ERROR] [UiPath.Studio.exe] [69] The process cannot access the file 'C:\Users\Stuart\Documents\UiPath-RPA-Developer\ReFramework\UiDemo2\CalculateClientSecurityHash\Framework\GetTransactionData.xaml' because it is being used by another process.
+21:15:24.9274 => [ERROR] [UiPath.Studio.exe] [31] The process cannot access the file 'C:\Users\Stuart\Documents\UiPath-RPA-Developer\ReFramework\UiDemo2\CalculateClientSecurityHash\Framework\InitAllApplications.xaml' because it is being used by another process.
+21:15:24.9274 => [ERROR] [UiPath.Studio.exe] [67] The process cannot access the file 'C:\Users\Stuart\Documents\UiPath-RPA-Developer\ReFramework\UiDemo2\CalculateClientSecurityHash\Framework\InitAllApplications.xaml' because it is being used by another process.
+21:15:24.9274 => [ERROR] [UiPath.Studio.exe] [34] The process cannot access the file 'C:\Users\Stuart\Documents\UiPath-RPA-Developer\ReFramework\UiDemo2\CalculateClientSecurityHash\Framework\InitAllApplications.xaml' because it is being used by another process.
+21:15:24.9274 => [ERROR] [UiPath.Studio.exe] [69] The process cannot access the file 'C:\Users\Stuart\Documents\UiPath-RPA-Developer\ReFramework\UiDemo2\CalculateClientSecurityHash\Framework\InitAllApplications.xaml' because it is being used by another process.
+21:15:24.9274 => [ERROR] [UiPath.Studio.exe] [67] The process cannot access the file 'C:\Users\Stuart\Documents\UiPath-RPA-Developer\ReFramework\UiDemo2\CalculateClientSecurityHash\Framework\InitAllApplications.xaml' because it is being used by another process.
+21:15:24.9274 => [ERROR] [UiPath.Studio.exe] [34] The process cannot access the file 'C:\Users\Stuart\Documents\UiPath-RPA-Developer\ReFramework\UiDemo2\CalculateClientSecurityHash\Framework\InitAllApplications.xaml' because it is being used by another process.
+21:15:24.9274 => [ERROR] [UiPath.Studio.exe] [69] The process cannot access the file 'C:\Users\Stuart\Documents\UiPath-RPA-Developer\ReFramework\UiDemo2\CalculateClientSecurityHash\Framework\InitAllApplications.xaml' because it is being used by another process.
+21:15:24.9274 => [ERROR] [UiPath.Studio.exe] [67] The process cannot access the file 'C:\Users\Stuart\Documents\UiPath-RPA-Developer\ReFramework\UiDemo2\CalculateClientSecurityHash\Framework\InitAllApplications.xaml' because it is being used by another process.
+21:15:24.9274 => [ERROR] [UiPath.Studio.exe] [34] The process cannot access the file 'C:\Users\Stuart\Documents\UiPath-RPA-Developer\ReFramework\UiDemo2\CalculateClientSecurityHash\Framework\InitAllApplications.xaml' because it is being used by another process.
+21:15:24.9274 => [ERROR] [UiPath.Studio.exe] [69] The process cannot access the file 'C:\Users\Stuart\Documents\UiPath-RPA-Developer\ReFramework\UiDemo2\CalculateClientSecurityHash\Framework\InitAllApplications.xaml' because it is being used by another process.
+21:15:24.9274 => [ERROR] [UiPath.Studio.exe] [31] The process cannot access the file 'C:\Users\Stuart\Documents\UiPath-RPA-Developer\ReFramework\UiDemo2\CalculateClientSecurityHash\Framework\InitAllApplications.xaml' because it is being used by another process.
+21:16:46.3410 => [ERROR] [UiPath.Studio.exe] [67] System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Nito.AsyncEx.TaskExtensions.<DoWaitAsync>d__3`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd(Task task)
+   at UiPath.Ipc.ServiceClient`1.<>c__DisplayClass17_0`1.<<InvokeAsync>b__3>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Ipc.IOHelpers.<WithResult>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Ipc.IOHelpers.<WithTimeout>d__11`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at UiPath.Ipc.ServiceClient`1.<>c__DisplayClass17_0`1.<InvokeAsync>b__4(Exception ex)
+   at UiPath.Ipc.IOHelpers.<WithTimeout>d__11`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Ipc.ServiceClient`1.<>c__DisplayClass17_0`1.<<InvokeAsync>b__2>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Ipc.ServiceClient`1.<InvokeAsync>d__17`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Studio.Plugin.Workflow.Robot.Services.RobotStudioBridge.<GetLocalsAsync>d__20.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Studio.Plugin.Workflow.Debugger.Locals.Services.ProjectLocalsService.<UpdateCachedLocalsAsync>d__40.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Studio.Plugin.Workflow.Debugger.Locals.Services.ProjectLocalsService.<GetLocalsAsync>d__39.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Studio.Plugin.Workflow.Debugger.Locals.Services.ProjectLocalsService.<UpdateAsync>d__25.MoveNext(), HResult -2146233029
+21:23:28.2057 => [WARN] [UiPath.Studio.Shared.Logging.OutputLogger] [15] NU1603: UiPath.UIAutomation.Activities 19.10.0-beta.566220 depends on UiPath.OCR.Contracts (>= 2.2.1-beta) but UiPath.OCR.Contracts 2.2.1-beta was not found. An approximate best match of UiPath.OCR.Contracts 2.2.1-beta.553728 was resolved.
+21:23:28.2177 => [WARN] [UiPath.Studio.Shared.Logging.OutputLogger] [15] NU1603: UiPath.UIAutomation.Activities 19.10.0-beta.566220 depends on UiPath.Vision (>= 1.8.1-beta) but UiPath.Vision 1.8.1-beta was not found. An approximate best match of UiPath.Vision 1.8.1-beta.561185 was resolved.
+21:23:35.0211 => [ERROR] [UiPath.Studio.exe] [1] The hot key DynamicWizardCommand52297972-e774-43d7-ad3d-495b8b4a5a2d was already registered with another command name
+21:23:36.7702 => [ERROR] [UiPath.Studio.exe] [25] $LoadAssembly: UiPath.CV, Version=19.10.0.0, Culture=neutral, PublicKeyToken=null: System.IO.FileNotFoundException: Could not load file or assembly 'Emgu.CV.World, Version=3.4.1.2984, Culture=neutral, PublicKeyToken=null' or one of its dependencies. The system cannot find the file specified.
+File name: 'Emgu.CV.World, Version=3.4.1.2984, Culture=neutral, PublicKeyToken=null'
+   at System.RuntimeTypeHandle.GetDeclaringType(RuntimeType type)
+   at System.RuntimeType.RuntimeTypeCache.GetEnclosingType()
+   at System.RuntimeType.get_DeclaringType()
+   at ActiproSoftware.Text.Languages.DotNet.Reflection.Implementation.BinaryAssemblyLoader.#gFc(Type #4Ub)
+   at ActiproSoftware.Text.Languages.DotNet.Reflection.Implementation.BinaryAssemblyLoader.<>c.#a1j(Type #gi)
+   at System.Linq.Enumerable.WhereArrayIterator`1.MoveNext()
+   at ActiproSoftware.Text.Languages.DotNet.Reflection.Implementation.BinaryAssemblyLoader.#XEc(Assembly #sxc)
+   at ActiproSoftware.Text.Languages.DotNet.Reflection.Implementation.BinaryAssemblyLoader.#iFc(Assembly #sxc)
+   at ActiproSoftware.Text.Languages.DotNet.Reflection.Implementation.AssemblyRepositoryBase.#30j(Assembly #sxc, IAssemblyName #4tc, IBinaryAssemblyMetadata #RDb)
+   at ActiproSoftware.Text.Languages.DotNet.Reflection.Implementation.AssemblyRepositoryBase.Create(Assembly assembly, IAssemblyName assemblyName, IBinaryAssemblyMetadata metadata)
+   at ActiproSoftware.Text.Languages.DotNet.Reflection.Implementation.FileBasedAssemblyRepository.Create(Assembly assembly, IAssemblyName assemblyName, IBinaryAssemblyMetadata metadata)
+   at ActiproSoftware.Text.Languages.DotNet.Reflection.Implementation.FileBasedAssemblyRepository.GetOrCreate(Assembly assembly, IAssemblyName assemblyName, String location)
+   at ActiproSoftware.Text.Languages.DotNet.Reflection.Implementation.AssemblyRepositoryBase.#uBh(Assembly #sxc, IAssemblyName #4tc, String #bVe)
+   at ActiproSoftware.Text.Languages.DotNet.Reflection.Implementation.AssemblyRepositoryBase.Load(Assembly assembly, IAssemblyName assemblyName)
+   at ActiproSoftware.Text.Languages.DotNet.Reflection.Implementation.AssemblyRepositoryBase.Load(String fullName)
+   at UiPath.Studio.Plugin.Workflow.ExpressionEditor.SyntaxService.LoadAssembly(LoadIntellisenseAssembliesContext context, String assemblyName, CancellationToken cancellationToken)
+
+WRN: Assembly binding logging is turned OFF.
+To enable assembly bind failure logging, set the registry value [HKLM\Software\Microsoft\Fusion!EnableLog] (DWORD) to 1.
+Note: There is some performance penalty associated with assembly bind failure logging.
+To turn this feature off, remove the registry value [HKLM\Software\Microsoft\Fusion!EnableLog].
+, HResult -2147024894
+21:23:36.8941 => [ERROR] [UiPath.Studio.exe] [25] $LoadAssembly: UiPath.CV, Version=19.10.0.0, Culture=neutral, PublicKeyToken=null: System.IO.FileNotFoundException: Could not load file or assembly 'Emgu.CV.World, Version=3.4.1.2984, Culture=neutral, PublicKeyToken=null' or one of its dependencies. The system cannot find the file specified.
+File name: 'Emgu.CV.World, Version=3.4.1.2984, Culture=neutral, PublicKeyToken=null'
+   at System.RuntimeTypeHandle.GetDeclaringType(RuntimeType type)
+   at System.RuntimeType.RuntimeTypeCache.GetEnclosingType()
+   at System.RuntimeType.get_DeclaringType()
+   at ActiproSoftware.Text.Languages.DotNet.Reflection.Implementation.BinaryAssemblyLoader.#gFc(Type #4Ub)
+   at ActiproSoftware.Text.Languages.DotNet.Reflection.Implementation.BinaryAssemblyLoader.<>c.#a1j(Type #gi)
+   at System.Linq.Enumerable.WhereArrayIterator`1.MoveNext()
+   at ActiproSoftware.Text.Languages.DotNet.Reflection.Implementation.BinaryAssemblyLoader.#XEc(Assembly #sxc)
+   at ActiproSoftware.Text.Languages.DotNet.Reflection.Implementation.BinaryAssemblyLoader.#iFc(Assembly #sxc)
+   at ActiproSoftware.Text.Languages.DotNet.Reflection.Implementation.AssemblyRepositoryBase.#30j(Assembly #sxc, IAssemblyName #4tc, IBinaryAssemblyMetadata #RDb)
+   at ActiproSoftware.Text.Languages.DotNet.Reflection.Implementation.AssemblyRepositoryBase.Create(Assembly assembly, IAssemblyName assemblyName, IBinaryAssemblyMetadata metadata)
+   at ActiproSoftware.Text.Languages.DotNet.Reflection.Implementation.FileBasedAssemblyRepository.Create(Assembly assembly, IAssemblyName assemblyName, IBinaryAssemblyMetadata metadata)
+   at ActiproSoftware.Text.Languages.DotNet.Reflection.Implementation.FileBasedAssemblyRepository.GetOrCreate(Assembly assembly, IAssemblyName assemblyName, String location)
+   at ActiproSoftware.Text.Languages.DotNet.Reflection.Implementation.AssemblyRepositoryBase.#uBh(Assembly #sxc, IAssemblyName #4tc, String #bVe)
+   at ActiproSoftware.Text.Languages.DotNet.Reflection.Implementation.AssemblyRepositoryBase.Load(Assembly assembly, IAssemblyName assemblyName)
+   at ActiproSoftware.Text.Languages.DotNet.Reflection.Implementation.AssemblyRepositoryBase.Load(String fullName)
+   at UiPath.Studio.Plugin.Workflow.ExpressionEditor.SyntaxService.LoadAssembly(LoadIntellisenseAssembliesContext context, String assemblyName, CancellationToken cancellationToken)
+
+WRN: Assembly binding logging is turned OFF.
+To enable assembly bind failure logging, set the registry value [HKLM\Software\Microsoft\Fusion!EnableLog] (DWORD) to 1.
+Note: There is some performance penalty associated with assembly bind failure logging.
+To turn this feature off, remove the registry value [HKLM\Software\Microsoft\Fusion!EnableLog].
+, HResult -2147024894
+21:23:37.4552 => [ERROR] [UiPath.Studio.exe] [25] $LoadAssembly: UiPath.CV, Version=19.10.0.0, Culture=neutral, PublicKeyToken=null: System.IO.FileNotFoundException: Could not load file or assembly 'Emgu.CV.World, Version=3.4.1.2984, Culture=neutral, PublicKeyToken=null' or one of its dependencies. The system cannot find the file specified.
+File name: 'Emgu.CV.World, Version=3.4.1.2984, Culture=neutral, PublicKeyToken=null'
+   at System.RuntimeTypeHandle.GetDeclaringType(RuntimeType type)
+   at System.RuntimeType.RuntimeTypeCache.GetEnclosingType()
+   at System.RuntimeType.get_DeclaringType()
+   at ActiproSoftware.Text.Languages.DotNet.Reflection.Implementation.BinaryAssemblyLoader.#gFc(Type #4Ub)
+   at ActiproSoftware.Text.Languages.DotNet.Reflection.Implementation.BinaryAssemblyLoader.<>c.#a1j(Type #gi)
+   at System.Linq.Enumerable.WhereArrayIterator`1.MoveNext()
+   at ActiproSoftware.Text.Languages.DotNet.Reflection.Implementation.BinaryAssemblyLoader.#XEc(Assembly #sxc)
+   at ActiproSoftware.Text.Languages.DotNet.Reflection.Implementation.BinaryAssemblyLoader.#iFc(Assembly #sxc)
+   at ActiproSoftware.Text.Languages.DotNet.Reflection.Implementation.AssemblyRepositoryBase.#30j(Assembly #sxc, IAssemblyName #4tc, IBinaryAssemblyMetadata #RDb)
+   at ActiproSoftware.Text.Languages.DotNet.Reflection.Implementation.AssemblyRepositoryBase.Create(Assembly assembly, IAssemblyName assemblyName, IBinaryAssemblyMetadata metadata)
+   at ActiproSoftware.Text.Languages.DotNet.Reflection.Implementation.FileBasedAssemblyRepository.Create(Assembly assembly, IAssemblyName assemblyName, IBinaryAssemblyMetadata metadata)
+   at ActiproSoftware.Text.Languages.DotNet.Reflection.Implementation.FileBasedAssemblyRepository.GetOrCreate(Assembly assembly, IAssemblyName assemblyName, String location)
+   at ActiproSoftware.Text.Languages.DotNet.Reflection.Implementation.AssemblyRepositoryBase.#uBh(Assembly #sxc, IAssemblyName #4tc, String #bVe)
+   at ActiproSoftware.Text.Languages.DotNet.Reflection.Implementation.AssemblyRepositoryBase.Load(Assembly assembly, IAssemblyName assemblyName)
+   at ActiproSoftware.Text.Languages.DotNet.Reflection.Implementation.AssemblyRepositoryBase.Load(String fullName)
+   at UiPath.Studio.Plugin.Workflow.ExpressionEditor.SyntaxService.LoadAssembly(LoadIntellisenseAssembliesContext context, String assemblyName, CancellationToken cancellationToken)
+
+WRN: Assembly binding logging is turned OFF.
+To enable assembly bind failure logging, set the registry value [HKLM\Software\Microsoft\Fusion!EnableLog] (DWORD) to 1.
+Note: There is some performance penalty associated with assembly bind failure logging.
+To turn this feature off, remove the registry value [HKLM\Software\Microsoft\Fusion!EnableLog].
+, HResult -2147024894
+21:23:37.5512 => [ERROR] [UiPath.Studio.exe] [25] $LoadAssembly: Microsoft.Exchange.WebServices.Auth, Version=15.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35: System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.IdentityModel, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35' or one of its dependencies. The system cannot find the file specified.
+File name: 'Microsoft.IdentityModel, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35'
+   at System.Signature.GetSignature(Void* pCorSig, Int32 cCorSig, RuntimeFieldHandleInternal fieldHandle, IRuntimeMethodInfo methodHandle, RuntimeType declaringType)
+   at System.Reflection.RuntimePropertyInfo.get_Signature()
+   at System.Reflection.RuntimePropertyInfo.get_PropertyType()
+   at ActiproSoftware.Text.Languages.DotNet.Reflection.Implementation.BinaryAssemblyLoader.#aFc(#Lrc #wAf, MemberInfo #xAf)
+   at ActiproSoftware.Text.Languages.DotNet.Reflection.Implementation.BinaryAssemblyLoader.#cFc(#hsc #4Ub, Type #uAf)
+   at ActiproSoftware.Text.Languages.DotNet.Reflection.Implementation.BinaryAssemblyLoader.#XEc(Assembly #sxc)
+   at ActiproSoftware.Text.Languages.DotNet.Reflection.Implementation.BinaryAssemblyLoader.#iFc(Assembly #sxc)
+   at ActiproSoftware.Text.Languages.DotNet.Reflection.Implementation.AssemblyRepositoryBase.#30j(Assembly #sxc, IAssemblyName #4tc, IBinaryAssemblyMetadata #RDb)
+   at ActiproSoftware.Text.Languages.DotNet.Reflection.Implementation.AssemblyRepositoryBase.Create(Assembly assembly, IAssemblyName assemblyName, IBinaryAssemblyMetadata metadata)
+   at ActiproSoftware.Text.Languages.DotNet.Reflection.Implementation.FileBasedAssemblyRepository.Create(Assembly assembly, IAssemblyName assemblyName, IBinaryAssemblyMetadata metadata)
+   at ActiproSoftware.Text.Languages.DotNet.Reflection.Implementation.FileBasedAssemblyRepository.GetOrCreate(Assembly assembly, IAssemblyName assemblyName, String location)
+   at ActiproSoftware.Text.Languages.DotNet.Reflection.Implementation.AssemblyRepositoryBase.#uBh(Assembly #sxc, IAssemblyName #4tc, String #bVe)
+   at ActiproSoftware.Text.Languages.DotNet.Reflection.Implementation.AssemblyRepositoryBase.Load(Assembly assembly, IAssemblyName assemblyName)
+   at ActiproSoftware.Text.Languages.DotNet.Reflection.Implementation.AssemblyRepositoryBase.Load(String fullName)
+   at UiPath.Studio.Plugin.Workflow.ExpressionEditor.SyntaxService.LoadAssembly(LoadIntellisenseAssembliesContext context, String assemblyName, CancellationToken cancellationToken)
+
+WRN: Assembly binding logging is turned OFF.
+To enable assembly bind failure logging, set the registry value [HKLM\Software\Microsoft\Fusion!EnableLog] (DWORD) to 1.
+Note: There is some performance penalty associated with assembly bind failure logging.
+To turn this feature off, remove the registry value [HKLM\Software\Microsoft\Fusion!EnableLog].
+, HResult -2147024894
+21:24:00.9453 => [ERROR] [UiPath.Studio.exe] [25] System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Nito.AsyncEx.TaskExtensions.<DoWaitAsync>d__3`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd(Task task)
+   at UiPath.Ipc.ServiceClient`1.<>c__DisplayClass17_0`1.<<InvokeAsync>b__3>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Ipc.IOHelpers.<WithResult>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Ipc.IOHelpers.<WithTimeout>d__11`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at UiPath.Ipc.ServiceClient`1.<>c__DisplayClass17_0`1.<InvokeAsync>b__4(Exception ex)
+   at UiPath.Ipc.IOHelpers.<WithTimeout>d__11`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Ipc.ServiceClient`1.<>c__DisplayClass17_0`1.<<InvokeAsync>b__2>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Ipc.ServiceClient`1.<InvokeAsync>d__17`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Studio.Plugin.Workflow.Robot.Services.RobotStudioBridge.<GetLocalsAsync>d__20.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Studio.Plugin.Workflow.Debugger.Locals.Services.ProjectLocalsService.<UpdateCachedLocalsAsync>d__40.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Studio.Plugin.Workflow.Debugger.Locals.Services.ProjectLocalsService.<GetLocalsAsync>d__39.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Studio.Plugin.Workflow.Debugger.Locals.Services.ProjectLocalsService.<UpdateAsync>d__25.MoveNext(), HResult -2146233029
+21:24:29.2469 => [WARN] [UiPath.Studio.exe] [1] XamlMigration: removed reference System.Runtime.WindowsRuntime
+21:27:34.5200 => [ERROR] [UiPath.Studio.exe] [3] System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Nito.AsyncEx.TaskExtensions.<DoWaitAsync>d__3`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd(Task task)
+   at UiPath.Ipc.ServiceClient`1.<>c__DisplayClass17_0`1.<<InvokeAsync>b__3>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Ipc.IOHelpers.<WithResult>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Ipc.IOHelpers.<WithTimeout>d__11`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at UiPath.Ipc.ServiceClient`1.<>c__DisplayClass17_0`1.<InvokeAsync>b__4(Exception ex)
+   at UiPath.Ipc.IOHelpers.<WithTimeout>d__11`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Ipc.ServiceClient`1.<>c__DisplayClass17_0`1.<<InvokeAsync>b__2>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Ipc.ServiceClient`1.<InvokeAsync>d__17`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Studio.Plugin.Workflow.Robot.Services.RobotStudioBridge.<GetLocalsAsync>d__20.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Studio.Plugin.Workflow.Debugger.Locals.Services.ProjectLocalsService.<UpdateCachedLocalsAsync>d__40.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Studio.Plugin.Workflow.Debugger.Locals.Services.ProjectLocalsService.<GetLocalsAsync>d__39.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Studio.Plugin.Workflow.Debugger.Locals.Services.ProjectLocalsService.<UpdateAsync>d__25.MoveNext(), HResult -2146233029
+21:28:02.1934 => [ERROR] [UiPath.Studio.exe] [26] System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Nito.AsyncEx.TaskExtensions.<DoWaitAsync>d__3`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd(Task task)
+   at UiPath.Ipc.ServiceClient`1.<>c__DisplayClass17_0`1.<<InvokeAsync>b__3>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Ipc.IOHelpers.<WithResult>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Ipc.IOHelpers.<WithTimeout>d__11`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at UiPath.Ipc.ServiceClient`1.<>c__DisplayClass17_0`1.<InvokeAsync>b__4(Exception ex)
+   at UiPath.Ipc.IOHelpers.<WithTimeout>d__11`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Ipc.ServiceClient`1.<>c__DisplayClass17_0`1.<<InvokeAsync>b__2>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Ipc.ServiceClient`1.<InvokeAsync>d__17`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Studio.Plugin.Workflow.Robot.Services.RobotStudioBridge.<GetLocalsAsync>d__20.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Studio.Plugin.Workflow.Debugger.Locals.Services.ProjectLocalsService.<UpdateCachedLocalsAsync>d__40.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Studio.Plugin.Workflow.Debugger.Locals.Services.ProjectLocalsService.<GetLocalsAsync>d__39.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Studio.Plugin.Workflow.Debugger.Locals.Services.ProjectLocalsService.<UpdateAsync>d__25.MoveNext(), HResult -2146233029
+21:28:37.7720 => [ERROR] [UiPath.Studio.Shared.Logging.OutputLogger] [23] Log Message: Object reference not set to an instance of an object.
+21:29:57.7862 => [ERROR] [UiPath.Studio.exe] [7] System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Nito.AsyncEx.TaskExtensions.<DoWaitAsync>d__1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Ipc.ServiceClient`1.<>c__DisplayClass17_0`1.<<InvokeAsync>b__3>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Ipc.IOHelpers.<WithResult>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Ipc.IOHelpers.<WithTimeout>d__11`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at UiPath.Ipc.ServiceClient`1.<>c__DisplayClass17_0`1.<InvokeAsync>b__4(Exception ex)
+   at UiPath.Ipc.IOHelpers.<WithTimeout>d__11`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Ipc.ServiceClient`1.<>c__DisplayClass17_0`1.<<InvokeAsync>b__2>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Ipc.ServiceClient`1.<InvokeAsync>d__17`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Studio.Plugin.Workflow.Robot.Services.RobotStudioBridge.<GetLocalsAsync>d__20.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Studio.Plugin.Workflow.Debugger.Locals.Services.ProjectLocalsService.<UpdateCachedLocalsAsync>d__40.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Studio.Plugin.Workflow.Debugger.Locals.Services.ProjectLocalsService.<GetLocalsAsync>d__39.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Studio.Plugin.Workflow.Debugger.Locals.Services.ProjectLocalsService.<UpdateAsync>d__25.MoveNext(), HResult -2146233029
+21:31:19.7892 => [ERROR] [UiPath.Studio.exe] [8] System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Nito.AsyncEx.TaskExtensions.<DoWaitAsync>d__3`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd(Task task)
+   at UiPath.Ipc.ServiceClient`1.<>c__DisplayClass17_0`1.<<InvokeAsync>b__3>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Ipc.IOHelpers.<WithResult>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Ipc.IOHelpers.<WithTimeout>d__11`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at UiPath.Ipc.ServiceClient`1.<>c__DisplayClass17_0`1.<InvokeAsync>b__4(Exception ex)
+   at UiPath.Ipc.IOHelpers.<WithTimeout>d__11`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Ipc.ServiceClient`1.<>c__DisplayClass17_0`1.<<InvokeAsync>b__2>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Ipc.ServiceClient`1.<InvokeAsync>d__17`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Studio.Plugin.Workflow.Robot.Services.RobotStudioBridge.<GetLocalsAsync>d__20.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Studio.Plugin.Workflow.Debugger.Locals.Services.ProjectLocalsService.<UpdateCachedLocalsAsync>d__40.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Studio.Plugin.Workflow.Debugger.Locals.Services.ProjectLocalsService.<GetLocalsAsync>d__39.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at UiPath.Studio.Plugin.Workflow.Debugger.Locals.Services.ProjectLocalsService.<UpdateAsync>d__25.MoveNext(), HResult -2146233029
+
+Ok Never Mind, I am not going to ready 1200 lines of logs to figure out whats going on. I just decided to copy the systemerror to Nothing after initing all the applications again.
+
+I can not seem to figure out why it is failing. I am going to rack it up to all the changes i made in the ReFramework through our my progress on this task. I am going to recreate the project by working with a fresh REFamework file. Sounds rought, but i think spending the 1 or 2 hours copying over workflows will be a good sanity check, rather than working on what is probably pretty unstable footing.
+
