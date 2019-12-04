@@ -1,0 +1,57 @@
+Back to work on the new 
+
+RemoteException wrapping System.Exception: Invalid asset type was specified for asset '{0}'. 
+   at UiPath.Core.Activities.BaseAssetActivity.EndExecute(AsyncCodeActivityContext context, IAsyncResult result)   at System.Activities.AsyncCodeActivity.System.Activities.IAsyncCodeActivity.FinishExecution(AsyncCodeActivityContext context, IAsyncResult result)   at System.Activities.AsyncCodeActivity.CompleteAsyncCodeActivityData.CompleteAsyncCodeActivityWorkItem.Execute(ActivityExecutor executor, BookmarkManager bookmarkManager)
+
+ Get Asset Value: Invalid asset type was specified for asset '{0}'.
+
+
+ Issue with 
+ transactionItem = Nothing condition
+
+ just changed it to transactionitem(1) = nothing to check to see if the second value in a given transaction item data rowis empty or not, and if it is to stop, fixing it.
+
+ Anotha one
+ Compiler error(s) encountered processing expression "TransactionItem".
+Value of type 'System.Data.DataRow' cannot be converted to 'UiPath.Core.QueueItem'.
+
+
+in_WI5List(in_TransactionNumber-1).ToString
+
+in_WI_ListGET(in_TransactionNumber-1)
+
+Cannot assign from type 'UiPath.Core.QueueItem' to type 'System.Data.DataRow' in Assign activity 'End Process'.
+
+Cannot assign from type 'UiPath.Core.QueueItem' to type 'System.Data.DataRow' in Assign activity 'End Process'.
+
+Error	ERROR	Compiler error(s) encountered processing expression "TransactionItem".
+Value of type 'System.Data.DataRow' cannot be converted to 'UiPath.Core.QueueItem'.	Main.xaml
+
+Deleting and creating
+out_TransactionItem		out 		DataRow 	novalue
+
+
+
+12/02/2019 16:25:36 Get Asset Value: Could not find an asset with this name. Error code: 1002
+	just need to include the 
+	system1credential in the settings tab instead of the assets tab... even though we are having it look for a uipath asset.
+
+Commented out the Log settings in init.
+
+Offically off the rails at this point (12/3) but i just want a working version, even if it does not fully utilize the framework.
+
+row("WIID").ToString
+
+row("WIID").ToString + ".txt"
+
+Changed selector in System1NavigatetoWIDetails from
+
+Acme Systems 1 - Dashboard
+to
+ACME System 1 - *
+
+Mostly working lall together now, Little bump in system1extract client information
+ClientID.Split({“Client ID: ”},StringSplitOptions.None)(1).ToString
+
+
+ClientName.Split({“Client Name: ”},StringSplitOptions.None)(1).ToString
