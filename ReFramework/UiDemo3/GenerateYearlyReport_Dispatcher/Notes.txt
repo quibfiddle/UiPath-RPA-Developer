@@ -1,0 +1,26 @@
+<html app='chrome.exe' title='ACME System 1 - Work Items' />
+<webctrl aaname='"+in_TransactionItem+"' tag='A' />
+
+I am setting the selector in the process to the above. I may need to rearanaged the escape characters.
+
+WorkItems.Select("Type='WI4' AND Status='open'")
+
+For the process of generating the queue items, im just going to use code used to extraced the WI5Items from last exercise.
+
+Found out the wierd issue with login's I forgot to deply the published process, so the robot was unable to get assets from Orchestrator.
+
+Ok still having that same issue. Going to try and see 
+
+Get Asset Value: Invalid asset type was specified for asset '{0}'.
+
+Ok, so i figured out what the problem is and fixed it with a hack of sorts. Essentially im not assigning the variable correclty in the config, and it shows up as null when the get app credentials is called.
+
+I just changed the argument from the variable i establish in the config called System1Credential to a straight up hardcoded string value of "System1Credential" which orchestrator is able to use and provide the correct credential asset to it. 
+
+I tried a few different settings in the config. It should just be
+Name 				Value
+System1Credential	"System1Credential"
+
+but it just doesn't like that, and instead set ups the System1Credential variable as a null string.
+
+Eitherway, the dispatcher is working and has created a queue of items in Orchestrator. Onto the Preformer.

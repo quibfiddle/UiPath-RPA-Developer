@@ -1,0 +1,52 @@
+Im excited to work with the REFramework with out changing the variable type of TransactionItem; that always set off an avalanche of fuckups. LET'S GOOOO.
+
+Just to get this down for Extract vendor information, i just adapted my extract customer information from last exercise.
+
+
+VendorTaxID = VendorInformationDetails.Split(Environment.NewLine.ToArray, StringSplitOptions.RemoveEmptyEntries)(0)
+
+out_VendorTaxID = ClientID.Split({“TaxID: ”},StringSplitOptions.None)(1).ToString
+
+ran into this error:
+Assign: Object reference not set to an instance of an object.
+
+duh, switched variable im splitting to
+
+out_VendorTaxID = VendorTaxID.Split({“TaxID: ”},StringSplitOptions.None)(1).ToString
+
+alright, it is now working and passing out the TAXID as a argument.
+
+sample WIID for generate yearly report for vendor:
+RO094782
+
+["January","February","March","April","May","June","July","August","September","October","November","December"]
+
+row(0).toString
+
+the escape characters are {()} btw' when you are working in the selector editor you can highlight something and right click on it to assign it to a varriable
+
+RO094782
+
+Data\Reports\
+
+Some test information:
+
+InvoiceNumber	Item	Amount	Tax	Total	Currency	Date
+522342	IT Support	222588	44517.6	267106	CAD	4/10/2017
+105450	Concierge Services	217884	43576.8	261461	CAD	4/15/2017
+736791	Beverages and Catering	122213	24442.6	146656	CAD	4/24/2017
+
+InvoiceNumber	Item	Amount	Tax	Total	Currency	Date
+485734	Various paper supplies	229200	45840	275040	EUR	8/19/2017
+
+InvoiceNumber	Item	Amount	Tax	Total	Currency	Date
+485734	Various paper supplies	229200	45840	275040	EUR	8/19/2017
+
+
+"Data\CompleteReport\Yearly-Report-"+in_Year.ToString+"-"+in_TaxID+".xlsx"
+
+Signing off for the night.
+I am still puzzling out how to deal with system1CreateYearlyReports,
+Specifically, merging the datatables.
+
+https://docs.uipath.com/activities/docs/manipulate-tables is where im going to review tomorrow

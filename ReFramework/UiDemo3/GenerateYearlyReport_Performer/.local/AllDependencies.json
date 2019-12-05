@@ -1659,11 +1659,11 @@
   },
   "project": {
     "restore": {
-      "projectUniqueName": "CalculateClientSecuirtyHash1.2",
-      "projectName": "CalculateClientSecuirtyHash1.2",
-      "projectPath": "C:\\Users\\Stuart\\Documents\\UiPath-RPA-Developer\\ReFramework\\UiDemo2.1StuartBingham\\RoboticEnterpriseFramework\\.local",
+      "projectUniqueName": "GenerateYearlyReport_Performer",
+      "projectName": "GenerateYearlyReport_Performer",
+      "projectPath": "C:\\Users\\Stuart\\Documents\\UiPath-RPA-Developer\\ReFramework\\UiDemo3\\GenerateYearlyReport_Performer\\.local",
       "packagesPath": "C:\\Users\\Stuart\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Stuart\\Documents\\UiPath-RPA-Developer\\ReFramework\\UiDemo2.1StuartBingham\\RoboticEnterpriseFramework\\.local"
+      "outputPath": "C:\\Users\\Stuart\\Documents\\UiPath-RPA-Developer\\ReFramework\\UiDemo3\\GenerateYearlyReport_Performer\\.local"
     },
     "frameworks": {
       "net461": {
